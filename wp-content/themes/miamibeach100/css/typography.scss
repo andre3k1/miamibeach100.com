@@ -1,0 +1,79 @@
+/* ///////////////////////////////////////////////////////////////////// 
+// TYPOGRAPHY
+/////////////////////////////////////////////////////////////////////*/
+
+h1, h2 {
+	font-size: 70rem;
+	text-align: left;
+	color: $heading-color-light;
+}
+
+
+h1 {
+	font-weight: 700;
+	span {font-weight: 400; color: $heading-color-light;}
+}
+
+h2 {
+	font-family: Raleway;
+	font-weight: 300;
+
+	&.sub {
+		font-size: 31rem;
+		@extend %mt30;
+		text-transform: uppercase;
+
+		span {color: #f4f4f4;}
+	}
+}
+
+h3, h4 {
+	font-family: Raleway;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 62.5rem;
+	color: $heading-color-hued;
+	margin-bottom: 15px;
+}
+
+h4 {
+	font-size: 38rem;
+	line-height: 48rem;
+	color: $heading-color-alternate;
+}
+
+h5 {
+	font-family: Raleway;
+	font-weight: 300;
+	font-size: 60rem;
+	line-height: 70rem;
+	
+	text-align: center;
+
+	&.light {
+		color: $heading-color-light;
+	}
+
+	&.hued {
+		color: $a-color-hued;
+	}
+
+	&.teal {
+		color:#4b96b1;
+	}
+
+	&.small {
+		color: $heading-color-light;
+		font-size: 20rem;
+		margin: 5px 0;
+	}
+}
+
+p.body-text {
+	font-family: 'Raleway';
+	font-weight: 400;
+	font-size: 21rem;
+	line-height: 25rem;
+}

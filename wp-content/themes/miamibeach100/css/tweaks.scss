@@ -1,0 +1,48 @@
+:focus {
+	outline: none !important;
+}
+
+::-moz-focus-inner {
+	border:0;
+}
+
+input::-moz-focus-inner { 
+  border: 0; 
+}
+
+input {
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
+ul, nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+form input {
+	border: none;
+}
+
+h1, h2, h3, h4, h5, h6, h7, p {
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type='checkbox'] {
+	-webkit-appearance: checkbox !important;
+	-moz-appearance: checkbox !important;
+	-ms-appearance: checkbox !important;
+	-o-appearance: checkbox !important;
+	appearance: checkbox !important;
+}
