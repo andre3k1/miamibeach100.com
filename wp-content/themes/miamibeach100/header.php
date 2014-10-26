@@ -29,6 +29,7 @@
   <meta itemprop="name" content="<?php bloginfo('name'); ?>">
   <meta itemprop="description" content="<?php echo get_bloginfo ( 'description' );  ?>">
   <meta itemprop="image" content="img/fbthumb.png">
+  <meta name="google-site-verification" content="Gds38oqJRojFOy6O7rMQftuQAZHdoUAASZxn-AEntNE" />
 
   <!--[if !IE]><!--><script>  
   if (/*@cc_on!@*/false) {  
