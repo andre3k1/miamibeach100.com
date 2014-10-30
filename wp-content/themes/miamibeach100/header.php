@@ -30,6 +30,7 @@
   <meta itemprop="description" content="<?php echo get_bloginfo ( 'description' );  ?>">
   <meta itemprop="image" content="img/fbthumb.png">
   <meta name="google-site-verification" content="Gds38oqJRojFOy6O7rMQftuQAZHdoUAASZxn-AEntNE" />
+  <meta name="google-site-verification" content="EXvS9nZe15vXlJCqBKMn5FORTL6U2Ds3QbP9jvascHw" />
 
   <!--[if !IE]><!--><script>  
   if (/*@cc_on!@*/false) {  
