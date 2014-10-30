@@ -10,8 +10,8 @@ jQuery(document).ready(function() {
   if (jQuery(window).width() > 1000) {
 
     var listCount = jQuery(".horizontal-slider ul.slides li").length;
-    listCount = (listCount - 1) * 557;
-    var finalCount = listCount + 540;
+    listCount = (listCount - 1) * 540;
+    var finalCount = listCount + 510;
     jQuery(".horizontal-slider ul.slides").width(finalCount);
 
   }

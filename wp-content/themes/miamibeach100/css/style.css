@@ -1885,7 +1885,7 @@ ul.contact-grid {
 footer .seal {
   padding-bottom: 100px !important; }
 
-.slant.about, .slant.legend, .slant.pics {
+.slant.about, .slant.pics {
   padding-bottom: 115px !important; }
 
 .slant.blog, .slant.contact, .slant.social, .slant.sponsors {
@@ -2016,7 +2016,7 @@ footer .seal {
   footer .seal {
     padding-bottom: 75px !important; }
 
-  .slant.about, .slant.legend, .slant.pics {
+  .slant.about, .slant.pics {
     padding-bottom: 86.25px !important; }
 
   .slant.blog, .slant.contact, .slant.social, .slant.sponsors {
@@ -2148,7 +2148,7 @@ footer .seal {
   footer .seal {
     padding-bottom: 60px !important; }
 
-  .slant.about, .slant.legend, .slant.pics {
+  .slant.about, .slant.pics {
     padding-bottom: 69px !important; }
 
   .slant.blog, .slant.contact, .slant.social, .slant.sponsors {
@@ -6415,6 +6415,15 @@ ul.social.main {
   background-size: 100%;
   height: 800px;
   z-index: 2; }
+  .opt-in .dont-forget {
+    position: absolute;
+    top: -80px;
+    left: 359px;
+    background: url(../img/sign-up-now.png) no-repeat;
+    width: 207px;
+    height: 176px;
+    display: block;
+    z-index: 9999; }
 
 .opt-in::before {
   content: " ";
@@ -6447,7 +6456,8 @@ ul.social.main {
     height: 39px;
     background-color: transparent;
     box-sizing: border-box;
-    padding-left: 10px; }
+    padding-left: 10px;
+    font-weight: bold; }
   .opt-in-form .email, .opt-in-form-events .email {
     margin-top: 88px; }
   .opt-in-form .mobile, .opt-in-form-events .mobile {
@@ -6480,7 +6490,8 @@ ul.social.main {
     font-size: 14rem;
     border-radius: 7px;
     transition: color .3s linear;
-    cursor: pointer; }
+    cursor: pointer;
+    font-weight: normal; }
     .opt-in-form .submit:hover, .opt-in-form-events .submit:hover {
       color: #cccccc; }
     .opt-in-form .submit.disabled, .opt-in-form-events .submit.disabled {
@@ -6506,7 +6517,8 @@ ul.social.main {
     *display: inline;
     _height: 15px;
     vertical-align: middle;
-    color: #c075c6; }
+    color: #c075c6;
+    font-weight: bold; }
     .opt-in-form .terms a, .opt-in-form-events .terms a {
       text-decoration: underline; }
     .opt-in-form .terms a:hover, .opt-in-form-events .terms a:hover {
@@ -6700,6 +6712,12 @@ ul.social.main {
     font-weight: 300;
     margin: 45px 0 80px 0;
     padding: 0px !important; }
+  .slant.legend p.credit {
+    font-size: 12rem;
+    text-align: justify;
+    font-style: italic;
+    color: #808080;
+    padding-bottom: 0px !important; }
   .slant.legend .scroll-pane {
     width: 100%;
     height: auto;
@@ -6720,7 +6738,8 @@ ul.social.main {
     display: inline-block;
     padding-left: 30px; }
     .slant.legend .horizontal-slider ul li img {
-      border: solid 9px #4b97b1; }
+      border: solid 9px #4b97b1;
+      box-sizing: border-box; }
   .slant.legend .horizontal-slider ul li:first-child {
     padding-left: 0px; }
   .slant.legend ::-webkit-scrollbar {
@@ -7111,7 +7130,7 @@ div.wpcf7 .placeheld {
     position: absolute;
     top: 0px;
     left: 359px;
-    background: url(../img/dont-forget.png) no-repeat;
+    background: url(../img/sign-up-now.png) no-repeat;
     width: 207px;
     height: 176px;
     display: block; }

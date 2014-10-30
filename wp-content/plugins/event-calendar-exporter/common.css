@@ -1,0 +1,17 @@
+
+
+	
+	#switcher {
+		margin-top: 20px;
+	}
+	
+	form {margin: 0; padding: 0;}
+
+        .tools_page_wp_ccsve_template .submit{
+            text-align: center
+        }
+
+        [name=ccsve_post_type]
+            {
+            display: none;
+            }
