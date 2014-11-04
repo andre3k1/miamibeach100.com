@@ -22,6 +22,18 @@
 		</div>
 	</section>
 
+	<section class="about-video">
+		<div class="vector-about-video" data-stellar-ratio="1.1"><img src="<?php //echo get_template_directory_uri(); ?>/img/vector-about-video.png" alt=""></div>
+		<div class="container">
+			<h5 class="hued animscroll">See what the Centennial is all about!</h5>
+				<div class="video-holder animscroll">
+					<iframe width="940" height="528" src="//www.youtube.com/embed/hSfShtnJPiw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+					<p class="video-credit">Video Produced by <a target="_blank" href="http://www.actproductions.com/">ACT Productions</a></p>
+					<div class="vector-about-video-right" data-stellar-ratio="1.1"></div>
+				</div>
+		</div>
+	</section>	
+
 	<section class="slant legend">
 		<div class="container">
 			<h5 class="hued animscroll">Miami Beach. How it all began.</h5>

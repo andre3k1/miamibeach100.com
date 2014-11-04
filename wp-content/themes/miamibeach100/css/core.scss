@@ -515,6 +515,17 @@ ul.social.main {
 
 	h5.hued { color: #4b96b1; }
 
+	p.video-credit {
+		margin-top: 14px;
+		text-align: center;
+
+		a {color: $p-color-hued; font-weight: 900;}
+
+		a:hover {
+			color: lighten( $p-color-hued, 20% );
+		}
+	}
+
 	iframe {
 		width: 100%;
 	}
@@ -705,7 +716,6 @@ ul.social.main {
 
 .blog article {
 	@extend %pt40;
-			@extend %mb100;
 
 	& + article, &.single {
 		margin-bottom: 0px !important;
