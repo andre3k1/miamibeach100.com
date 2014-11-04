@@ -1,8 +1,5 @@
-# Linux
 *~
 .directory
-
-# OSX
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -15,29 +12,21 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
-# Sublime Text
 *.tmlanguage.cache
 *.tmPreferences.cache
 *.stTheme.cache
 *.sublime-workspace
 *.sublime-project
 sftp-config.json
-
-# TextMate
 *.tmproj
 *.tmproject
 tmtags
-
-# ViM
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
 *.un~
 Session.vim
 .netrwhist
 *~
-
-# WordPress
 *.log
 .htaccess
 sitemap.xml
@@ -51,3 +40,4 @@ wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/
 wp-content/wp-cache-config.php
+wp-local-config.php
