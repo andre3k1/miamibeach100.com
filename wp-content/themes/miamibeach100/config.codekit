@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "17682",
+"creatorBuild": "18027",
 "files": {
 	"\/css\/core.scss": {
 		"createSourceMap": 0,
@@ -111,8 +111,8 @@
 		"outputAbbreviatedPath": "\/css\/style.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
@@ -393,17 +393,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/favicon-mb.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1396,
-		"inputAbbreviatedPath": "\/img\/favicon-mb.jpg",
-		"outputAbbreviatedPath": "\/img\/favicon-mb.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/fbthumb.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -532,6 +521,17 @@
 		"initialSize": 23967,
 		"inputAbbreviatedPath": "\/img\/post-blog.jpg",
 		"outputAbbreviatedPath": "\/img\/post-blog.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/sign-up-now.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5074,
+		"inputAbbreviatedPath": "\/img\/sign-up-now.png",
+		"outputAbbreviatedPath": "\/img\/sign-up-now.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -668,6 +668,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/vectors\/vectors-left-blog-sponsors.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 25246,
+		"inputAbbreviatedPath": "\/img\/vectors\/vectors-left-blog-sponsors.png",
+		"outputAbbreviatedPath": "\/img\/vectors\/vectors-left-blog-sponsors.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/vectors\/vectors-left-contact.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -719,6 +730,17 @@
 		"initialSize": 25985,
 		"inputAbbreviatedPath": "\/img\/vectors\/vectors-right-about.png",
 		"outputAbbreviatedPath": "\/img\/vectors\/vectors-right-about.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/vectors\/vectors-right-blog-sponsors.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 15853,
+		"inputAbbreviatedPath": "\/img\/vectors\/vectors-right-blog-sponsors.png",
+		"outputAbbreviatedPath": "\/img\/vectors\/vectors-right-blog-sponsors.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -814,15 +836,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/main.js",
-		"outputAbbreviatedPath": "\/js\/min\/main-ck.js",
+		"outputAbbreviatedPath": "\/js\/min\/main.min.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/min\/main.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/min\/main.min.js",
 		"outputAbbreviatedPath": "\/js\/min\/min\/main.min-ck.js",
@@ -833,8 +855,8 @@
 		},
 	"\/js\/min\/scripts.min.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/min\/scripts.min.js",
 		"outputAbbreviatedPath": "\/js\/min\/min\/scripts.min-ck.js",
 		"outputPathIsOutsideProject": 0,
@@ -844,8 +866,8 @@
 		},
 	"\/js\/plugins\/animations.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/plugins\/animations.js",
 		"outputAbbreviatedPath": "\/js\/plugins\/min\/animations-ck.js",
 		"outputPathIsOutsideProject": 0,
@@ -886,8 +908,8 @@
 		},
 	"\/js\/plugins\/flex\/jquery.flexslider-min.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/plugins\/flex\/jquery.flexslider-min.js",
 		"outputAbbreviatedPath": "\/js\/plugins\/flex\/min\/jquery.flexslider-min-ck.js",
 		"outputPathIsOutsideProject": 0,
@@ -897,8 +919,8 @@
 		},
 	"\/js\/plugins\/jquery.fitvids.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/plugins\/jquery.fitvids.js",
 		"outputAbbreviatedPath": "\/js\/plugins\/min\/jquery.fitvids-ck.js",
 		"outputPathIsOutsideProject": 0,
@@ -908,8 +930,8 @@
 		},
 	"\/js\/plugins\/jquery.jscrollpane.min.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/plugins\/jquery.jscrollpane.min.js",
 		"outputAbbreviatedPath": "\/js\/plugins\/min\/jquery.jscrollpane.min-ck.js",
 		"outputPathIsOutsideProject": 0,
@@ -919,8 +941,8 @@
 		},
 	"\/js\/plugins\/jquery.mousewheel.min.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/plugins\/jquery.mousewheel.min.js",
 		"outputAbbreviatedPath": "\/js\/plugins\/min\/jquery.mousewheel.min-ck.js",
 		"outputPathIsOutsideProject": 0,
@@ -930,8 +952,8 @@
 		},
 	"\/js\/plugins\/jquery.stellar.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/plugins\/jquery.stellar.js",
 		"outputAbbreviatedPath": "\/js\/plugins\/min\/jquery.stellar-ck.js",
 		"outputPathIsOutsideProject": 0,
@@ -939,21 +961,10 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/plugins\/min\/animations-ck.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/plugins\/min\/animations-ck.js",
-		"outputAbbreviatedPath": "\/js\/plugins\/min\/min\/animations-ck.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/js\/plugins\/mwheelIntent.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/plugins\/mwheelIntent.js",
 		"outputAbbreviatedPath": "\/js\/plugins\/min\/mwheelIntent-ck.js",
 		"outputPathIsOutsideProject": 0,
@@ -972,8 +983,8 @@
 		},
 	"\/js\/plugins\/nivo\/nivo-lightbox.min.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/plugins\/nivo\/nivo-lightbox.min.js",
 		"outputAbbreviatedPath": "\/js\/plugins\/nivo\/min\/nivo-lightbox.min-ck.js",
 		"outputPathIsOutsideProject": 0,
@@ -1058,8 +1069,8 @@
 		},
 	"\/js\/plugins\/prefixfree.min.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/plugins\/prefixfree.min.js",
 		"outputAbbreviatedPath": "\/js\/plugins\/min\/prefixfree.min-ck.js",
 		"outputPathIsOutsideProject": 0,
@@ -1067,34 +1078,12 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/plugins\/unused\/jquery.nanoscroller.js": {
+	"\/js\/plugins\/twitter.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/plugins\/unused\/jquery.nanoscroller.js",
-		"outputAbbreviatedPath": "\/js\/plugins\/unused\/min\/jquery.nanoscroller-ck.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/plugins\/unused\/jquery.smooth-scroll.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/plugins\/unused\/jquery.smooth-scroll.min.js",
-		"outputAbbreviatedPath": "\/js\/plugins\/unused\/min\/jquery.smooth-scroll.min-ck.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/plugins\/unused\/waypoints.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/plugins\/unused\/waypoints.min.js",
-		"outputAbbreviatedPath": "\/js\/plugins\/unused\/min\/waypoints.min-ck.js",
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/js\/plugins\/twitter.js",
+		"outputAbbreviatedPath": "\/js\/plugins\/min\/twitter.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -1102,8 +1091,8 @@
 		},
 	"\/js\/plugins\/viewportchecker.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/plugins\/viewportchecker.js",
 		"outputAbbreviatedPath": "\/js\/plugins\/min\/viewportchecker-ck.js",
 		"outputPathIsOutsideProject": 0,
@@ -1111,21 +1100,10 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/scripts.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/scripts.js",
-		"outputAbbreviatedPath": "\/js\/min\/scripts-ck.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/js\/vendor\/jquery-1.11.1.min.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/vendor\/jquery-1.11.1.min.js",
 		"outputAbbreviatedPath": "\/js\/vendor\/min\/jquery-1.11.1.min-ck.js",
 		"outputPathIsOutsideProject": 0,
@@ -1133,21 +1111,10 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/vendor\/min\/jquery-1.10.2.min.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/vendor\/min\/jquery-1.10.2.min.min.js",
-		"outputAbbreviatedPath": "\/js\/vendor\/min\/min\/jquery-1.10.2.min.min-ck.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/js\/vendor\/modernizr-2.6.2.min.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/vendor\/modernizr-2.6.2.min.js",
 		"outputAbbreviatedPath": "\/js\/vendor\/min\/modernizr-2.6.2.min-ck.js",
 		"outputPathIsOutsideProject": 0,
@@ -1245,6 +1212,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/offers.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/offers.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/page-about-full.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1295,6 +1271,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/page-home.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/page-offers.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/page-offers.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1568,6 +1553,10 @@
 			"flagValue": -1
 			},
 		"non_empty_constructor_needs_parens": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"prefer_english_operator": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -2046,6 +2035,7 @@
 	"stylusAutoOutputPathReplace1": "stylus",
 	"stylusAutoOutputPathReplace2": "css",
 	"stylusAutoOutputPathStyle": 2,
+	"stylusCreateSourceMap": 0,
 	"stylusDebugStyle": 0,
 	"stylusImportCSS": 0,
 	"stylusOutputStyle": 0,
