@@ -29,5 +29,6 @@ var config1 = {
   "showUser": false,
   "showInteraction": false,
   "showTime": false,
+  "showImages": false
 };
 twitterFetcher.fetch(config1);
