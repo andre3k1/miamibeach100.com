@@ -23,7 +23,7 @@
 	</section>
 
 	<section class="about-video">
-		<div class="vector-about-video" data-stellar-ratio="1.1"><img src="<?php //echo get_template_directory_uri(); ?>/img/vector-about-video.png" alt=""></div>
+		<div class="vector-about-video" data-stellar-ratio="1.1"><img src="<?php echo get_template_directory_uri(); ?>/img/vectors/vector-about-video.png" alt=""></div>
 		<div class="container">
 			<h5 class="hued animscroll">See what the Centennial is all about!</h5>
 				<div class="video-holder animscroll">
