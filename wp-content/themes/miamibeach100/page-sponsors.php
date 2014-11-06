@@ -23,27 +23,29 @@
 			<div class="vector-bg-left-small-sponsors" data-stellar-ratio="1.1"></div>
 
 			<?php if(get_field('top_banner_sponsors')): ?>
-
+				
 				<ul class="row animscroll">
+					
+						<?php while(has_sub_field('top_banner_sponsors')): ?>
+							<li>
+								<a href="<?php the_sub_field('url'); ?>" target="_blank">
 
-					<?php while(has_sub_field('top_banner_sponsors')): ?>
-						<li>
-							<a href="<?php the_sub_field('url'); ?>" target="_blank">
+									<?php 
 
-								<?php 
+										$image = get_sub_field('image');
+										$size = 'sponsor-banner';
+										echo wp_get_attachment_image( $image, $size );
 
-									$image = get_sub_field('image');
-									$size = 'sponsor-banner';
-									echo wp_get_attachment_image( $image, $size );
-
-								?>
-							</a>
-						</li>
-	    			<?php endwhile; ?>
+									?>
+								</a>
+							</li>
+		    			<?php endwhile; ?>
 
 	  			</ul>
 
 			<?php endif; ?>
+
+			<h1 class="animscroll">Cultural Sponsors</h1>
 
 			<?php if(get_field('sqaure_sponsors')): ?>
 
