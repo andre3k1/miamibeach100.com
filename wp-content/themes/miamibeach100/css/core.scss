@@ -1446,6 +1446,14 @@ div.wpcf7 .placeheld {
 			height: 51px !important;
 			border-radius: 50% !important;
 		}
+
+		&[rel="youtube"]::before { content: "\f167"; font-family: 'FontAwesome' !important; font-size: 25rem; line-height: 51px; }
+		&[rel="youtube"] {
+			background: transparent !important;
+			width: 49px !important;
+			height: 51px !important;
+			border-radius: 50% !important;
+		}
 	
 		&[rel="instagram"]::before { content: "\f16d"; font-family: 'FontAwesome' !important; font-size: 25rem; line-height: 51px; }
 		&[rel="instagram"] {
