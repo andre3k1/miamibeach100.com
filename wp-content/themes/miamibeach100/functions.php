@@ -106,4 +106,10 @@ function custom_post_type() {
 // Hook into the 'init' action
 add_action( 'init', 'custom_post_type', 0 );
 
+// Removes "Add to Google Calendar" button
+add_action('tribe_events_single_event_before_the_content', 'tribe_remove_single_event_links');
+function tribe_remove_single_event_links () {
+        remove_action( 'tribe_events_single_event_after_the_content', array( 'TribeiCal', 'single_event_links' ) );
+}
+
 ?>
