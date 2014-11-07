@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+# HOW TO INSTALL
+# sudo ln -s /var/www/vhosts/gsnb-kgxx.accessdomain.com/httpdocs/scripts/backup.script /etc/cron.daily/wordpress-backup.cron && sudo chmod +x /etc/cron.daily/wordpress-backup.cron
+
+WP_DIR="/var/www/vhosts/gsnb-kgxx.accessdomain.com/httpdocs"
+
+DB_USER="wp"
+DB_PASS="Miamibeach@305!"
+DB_NAME="miamibeach100-wp"
+
+BK_DIR="/root/backups"
+CURRENT_TIME=$(date +"%Y-%m-%d-%H%M")
+DB_DUMP="miamibeach100.com-$CURRENT_TIME.sql"
+BK_FILE="miamibeach100.com-$CURRENT_TIME.tar"
+
+WWW_TRANSFORM='s,^var/www/vhosts/gsnb-kgxx.accessdomain.com/httpdocs,www,'
+DB_TRANSFORM='s,^root/backups,database,'
+
+mysqldump -u$DB_USER -p$DB_PASS -$DB_NAME > $BK_DIR/$DB_DUMP
+
+tar -cvf $BK_DIR/$BK_FILE --transform $WWW_TRANSFORM $WP_DIR
+tar --append --file=$BK_DIR/$BK_FILE --transform $DB_TRANSFORM $BK_DIR/$DB_DUMP
+
+rm $BK_DIR/$DB_DUMP
+gzip -9 $BK_DIR/$BK_FILE
+
+find $BK_DIR/miamibeach100.com* -mtime +30 -exec rm {} \;
+
+/usr/local/bin/aws s3 sync /root/backups s3://miamibeach100.com-backups --recursive --delete
+
