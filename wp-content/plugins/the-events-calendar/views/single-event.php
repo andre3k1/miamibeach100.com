@@ -1,3 +1,4 @@
+<?php
 /**
  * Single Event Template
  * A single event. This displays the event title, description, meta, and
@@ -26,9 +27,8 @@ $event_id = get_the_ID();
 	<!-- Notices -->
 	<?php tribe_events_the_notices() ?>
 
-
 	<div class="tribe-events-schedule updated published tribe-clearfix">
-	        <?php the_title( '<h3><span class="tribe-events-single-event-title summary entry-title">', '</span></h3>' ); ?>
+		<?php the_title( '<h3><span class="tribe-events-single-event-title summary entry-title">', '</span></h3>' ); ?>
 	</div>
 
 	<?php while ( have_posts() ) :  the_post(); ?>
