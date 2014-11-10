@@ -117,10 +117,11 @@
 					<span class="name-part title">Celebrating </span> <span class="name-part animRight">100 </span><span class="other"> Years</span>
 				</h1>
 				<h2 class="subtitle">of Miami Beach</h2>
-				<a href="<?php get_site_url(); ?>/about/" class="btn">Learn More</a>	
+				<a href="#opt-in" class="btn">Learn More &nbsp;&nbsp;<i class="fa fa-angle-down fa-lg"></i></a>
+				<!-- <a href="<?php get_site_url(); ?>/about/" class="btn">Learn More &nbsp;&nbsp;<i class="fa fa-angle-down fa-lg"></i></a> -->
 			</div>
-
 		</div>
+
 	</section>
 
 	<section class="opt-in">

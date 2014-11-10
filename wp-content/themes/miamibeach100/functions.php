@@ -24,6 +24,7 @@ function deep_scripts()
   wp_enqueue_script( 'viewportchecker', get_template_directory_uri() . '/js/plugins/viewportchecker.js', array( 'jquery' ),'', true );
   wp_enqueue_script( 'prefixfree', get_template_directory_uri() . '/js/plugins/prefixfree.min.js', array( 'jquery' ),'', true );
   wp_enqueue_script( 'animations', get_template_directory_uri() . '/js/plugins/animations.js', array( 'jquery' ),'', true );
+  wp_enqueue_script( 'jquery-easing', get_template_directory_uri() . '/js/plugins/jquery.easing.min.js', array( 'jquery' ),'', true );
 
 
 if ( is_page('about')) {

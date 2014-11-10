@@ -68,3 +68,9 @@ jQuery('.mobile-nav').click (function(){
 
 return false;
 });
+
+// Scroll animation Home page
+jQuery("a[href='#opt-in']").click(function() {
+  jQuery("html, body").animate({ scrollTop: (jQuery('.opt-in').offset().top - 50) + '%'}, 700, "easeOutQuint");
+  return false;
+});
