@@ -67,7 +67,7 @@
 				</li>
 				<li>
 					<a target="_blank" href="mailto:"><i class="fa fa-envelope"></i></a>
-					<p class="contact-info"><a target="_blank" href="mailto:info@miamibeach100.com">info@miamibeach100.com</a></p>
+					<p class="contact-info"><a target="_blank" href="mailto:contact@miamibeach100.com">contact@miamibeach100.com</a></p>
 				</li>
 				<li>
 					<a target="_blank" href=""><i class="fa fa-phone"></i></a>
