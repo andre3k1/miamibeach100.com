@@ -47,7 +47,7 @@
 
 			<?php endif; ?>
 
-			<h1 class="animscroll">Cultural Sponsors</h1>
+			<h1 class="animscroll">Cultural Partners</h1>
 
 			<?php if(get_field('sqaure_sponsors')): ?>
 
