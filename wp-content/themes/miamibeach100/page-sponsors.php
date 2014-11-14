@@ -22,6 +22,8 @@
 
 			<div class="vector-bg-left-small-sponsors" data-stellar-ratio="1.1"></div>
 
+			<h1 class="animscroll">Official Centennial Sponsors</h1>
+
 			<?php if(get_field('top_banner_sponsors')): ?>
 				
 				<ul class="row animscroll">
@@ -44,8 +46,6 @@
 	  			</ul>
 
 			<?php endif; ?>
-
-			<h1 class="animscroll">Cultural Sponsors</h1>
 
 			<?php if(get_field('sqaure_sponsors')): ?>
 
