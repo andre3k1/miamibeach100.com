@@ -20,7 +20,6 @@
 		<div class="container">
 			
 			<h5 class="hued animscroll">The Present will be History --<br> so be a part of it!</h5>
-			<p class="intro-pics blurb animscroll">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc adipiscing, odio eu euismod blandit, ligula mi faucibus erat, eget suscipit ante lorem id diam. In gravida fringilla felis, vel </p>
 			<div class="vector-bg-right-small" data-stellar-ratio="1.1"></div>
 
 
