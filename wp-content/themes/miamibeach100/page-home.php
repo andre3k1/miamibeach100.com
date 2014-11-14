@@ -114,7 +114,7 @@
 			</ul> -->
 			<div class="tagline">
 				<h1 class="name">
-					<span class="name-part title">Celebrating </span> <span class="name-part animRight">100 </span><span class="other"> Years</span>
+					<span class="name-part title">Celebrating </span> <span class="name-part animRight">1OO </span><span class="other"> Years</span>
 				</h1>
 				<h2 class="subtitle">of Miami Beach</h2>
 				<a href="#opt-in" class="btn">Learn More &nbsp;&nbsp;<i class="fa fa-angle-down fa-lg"></i></a>
