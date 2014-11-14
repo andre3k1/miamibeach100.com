@@ -47,6 +47,8 @@
 
 			<?php endif; ?>
 
+			<h1 class="animscroll">Cultural Sponsors</h1>
+
 			<?php if(get_field('sqaure_sponsors')): ?>
 
 				<ul class="tile-grid animscroll">
