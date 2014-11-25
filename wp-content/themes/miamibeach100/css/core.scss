@@ -1483,7 +1483,6 @@ div.wpcf7 .placeheld {
 		color: #4b96b1;
 		text-align: center;
 		margin-top: 30px;
-		line-height: 10px;
 	}
 
 	.row {
@@ -1491,11 +1490,11 @@ div.wpcf7 .placeheld {
 		margin: 0 auto;
 		display: block;
 		overflow: hidden;
-		@extend %pt20;
 
 		li {
 			height: auto;
 			margin: 0px 29.5px 30px 29.5px;
+			@extend %mt50;
 		}
 
 		li a img {
@@ -1510,7 +1509,25 @@ div.wpcf7 .placeheld {
 
 	a:hover {
 		opacity: .65;
-	}	
+	}
+
+	.sponsor-contact {
+
+		h1 {
+			font-size: 30rem;
+			@extend %mt70;
+			@extend %mb20;
+		}
+
+		p {
+			font-size: 13rem;
+			line-height: 22rem;
+			text-align: justify;
+			color: #525252;
+		}
+
+	}
+
 }
 
 /* ///////////////////////////////////////////////////////////////////// 
@@ -1759,7 +1776,7 @@ a.btn {
 		height: 200px;
 		display: inline-block;
 		margin: 0px 8.5px 30px 8.5px;
-		@extend %mt60;
+		@extend %mt50;
 	}
 	a p.thumb-link {
 		@extend %pt25;

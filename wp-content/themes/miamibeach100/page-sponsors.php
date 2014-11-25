@@ -22,6 +22,8 @@
 
 			<div class="vector-bg-left-small-sponsors" data-stellar-ratio="1.1"></div>
 
+			<br>
+
 			<h1 class="animscroll">Official Centennial Sponsors</h1>
 
 			<?php if(get_field('top_banner_sponsors')): ?>
@@ -73,6 +75,15 @@
 			<?php endif; ?>
 
 			<div class="vector-bg-right-small-sponsors" data-stellar-ratio="1.1"></div>
+
+			<div class="sponsor-contact">
+				<h1 class="animscroll">Centennial Sponsorship Packages & Site Activation Opportunities</h1>
+
+				<p class="animscroll">
+				The City of Miami Beach is pleased to provide unique sponsorship packages for Centennial events in addition to a wide variety of customizable activation opportunities for brands interested in being featured in these historic productions.
+				A wide variety of premium branding, promotions, customer engagement, product sampling and lead generation opportunities are available.  Our Centennial Sponsorship team will be pleased to personally work hand-in-hand with your brand to develop specifically customized sponsorship packages upon request.  For more information about Centennial Sponsorships please call (305) 341-7899 or E-Mail: <a href="mailto:sponsorships@miamibeach100.com">sponsorships@miamibeach100.com</a>
+				</p>
+			</div>		
 
 		</div>
 
