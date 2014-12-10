@@ -26,6 +26,11 @@ function deep_scripts()
   wp_enqueue_script( 'animations', get_template_directory_uri() . '/js/plugins/animations.js', array( 'jquery' ),'', true );
   wp_enqueue_script( 'jquery-easing', get_template_directory_uri() . '/js/plugins/jquery.easing.min.js', array( 'jquery' ),'', true );
 
+  wp_enqueue_script( 'redcountdown', get_template_directory_uri() . '/js/plugins/jquery.redcountdown.js', array( 'jquery' ),'', true );
+  wp_enqueue_script( 'excanvas', get_template_directory_uri() . '/js/3rdparty/excanvas.js', array( 'jquery' ),'', true );
+  wp_enqueue_script( 'debounce', get_template_directory_uri() . '/js/3rdparty/jquery.knob.min.js', array( 'jquery' ),'', true );
+  wp_enqueue_script( 'knob', get_template_directory_uri() . '/js/3rdparty/jquery.ba-throttle-debounce.min.js', array( 'jquery' ),'', true );
+
 
 if ( is_page('about')) {
   wp_enqueue_script( 'jscrollpane', get_template_directory_uri() . '/js/plugins/jquery.jscrollpane.min.js','','', true );

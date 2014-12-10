@@ -124,6 +124,21 @@
 
 	</section>
 
+<!-- Countdown -->
+	<section class="countDown">
+		<div class="container">
+			<div class="counter">
+				<h3>The Countdown is on!</h3>
+				<p>We are counting down the days for Miami Beach's Birthday dash
+				<br>Brought to you by</p>
+				<img src="<?php echo get_template_directory_uri(); ?>/img/logo-hublot.png" alt="Hublot">
+				<div style="padding:20px;"><div id="rC"></div></div>
+			</div>
+		</div>
+	</section>
+
+
+
 	<section class="opt-in">
 
 		<div class="container">

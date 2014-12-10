@@ -81,6 +81,11 @@
 		}
 	}
 
+	//Counter
+	.counter h3 {
+		margin-top: 160px !important;
+	}
+
 	ul.social.main {
 		position: static;
 		@include inline-block;
@@ -413,6 +418,20 @@
 		.small {line-height: 50rem !important;}
 	}
 
+	//Counter
+	section.countDown {
+		margin-top: -200px !important;
+		height: auto !important;
+	}
+	.counter { 
+		img { 
+			width: 30%;
+		}
+		h3 {
+			padding-top: 90px !important;
+		}
+	}
+
 	.logo {
 		width: 190px;
 		height: auto;
@@ -630,6 +649,13 @@
 	.vectors-left,
 	.vectors-right {
 		display: none;
+	}
+
+//Counter
+	section.countDown {
+		background: url(../img/bg-counter-mobile.png) no-repeat;
+		margin-top: -240px !important;
+		height: auto !important;
 	}
 
 	.opt-in {
