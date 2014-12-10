@@ -78,7 +78,7 @@ jQuery("a[href='#opt-in']").click(function() {
 
 
   var today = jQuery.now();
-  var endTime = 1427328000000;
+  var endTime = 1427342400000;
   var difference = Math.floor(endTime - today) / 1000;
   //difference = difference/1000;
 
