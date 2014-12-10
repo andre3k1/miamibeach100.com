@@ -161,6 +161,43 @@ ul.social.main {
 
 }
 
+// Thibault countdown - 12/9/2014
+
+section.countDown {
+	background: url(../img/bg-counter.png) no-repeat;
+	background-size: cover;
+	margin-top: -240px;
+	text-align: center;
+	height: auto;
+	box-sizing: border-box;
+	@extend %pb180;
+	@extend %pt30;
+}
+
+#rC { }
+
+.counter {
+	background: transparent;
+
+		h3, p { color: #fff; }
+
+		h3 { @extend %pt200; }
+
+		p {
+			line-height: 35px;
+			font-size: 20px;
+		}
+
+		img {
+			@extend %pt25;
+			@extend %pb25;
+		}
+		span { color: #fff; }
+}
+
+// End countDown
+
+
 .opt-in {
 	position: relative;
 	background-size: 100%;

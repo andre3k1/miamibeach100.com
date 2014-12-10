@@ -74,3 +74,14 @@ jQuery("a[href='#opt-in']").click(function() {
   jQuery("html, body").animate({ scrollTop: (jQuery('.opt-in').offset().top - 50) + '%'}, 700, "easeOutQuint");
   return false;
 });
+
+
+
+  var today = jQuery.now();
+  var endTime = 1426996800000;
+  var difference = Math.floor(endTime - today) / 1000;
+  //difference = difference/1000;
+
+
+  // CountDown Homepage
+  jQuery('#rC').redCountdown({ preset: "white", end: today + difference  });
