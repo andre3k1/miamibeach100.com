@@ -1485,6 +1485,12 @@ div.wpcf7 .placeheld {
 		margin-top: 30px;
 	}
 
+	ul.tile-grid {
+		p.thumb-link {
+			font-size: 12rem;
+		}
+	}
+
 	.row {
 		width: 100%;
 		margin: 0 auto;
@@ -1550,7 +1556,7 @@ div.wpcf7 .placeheld {
 		text-align: left;
 		font-family: 'Raleway';
 		font-weight: 700;
-		font-size: 20rem;
+		font-size: 12rem;
 		line-height: 30rem;
 	}
 
@@ -1558,7 +1564,7 @@ div.wpcf7 .placeheld {
 		font-family: 'Raleway';
 		font-weight: 400;
 		text-align: left;
-		font-size: 20rem;
+		font-size: 12rem;
 	}
 
 	.blog-navigation {
