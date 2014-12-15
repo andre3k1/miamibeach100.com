@@ -3,8 +3,8 @@ Contributors: ithemes, ChrisWiegman, mattdanner, chrisjean
 Donate link: https://ithemes.com/security
 Tags: security, malware, secure, multi-site, network, mu, login, lockdown, htaccess, hack, header, cleanup, ban, restrict, access, protect, protection, disable, images, image, hotlink, admin, username, database, prefix, wp-content, rename, directory, directories, secure, SSL, iThemes, BackupBuddy, Exchange, iThemes Exchange
 Requires at least: 3.9
-Tested up to: 4.0
-Stable tag: 4.4.18
+Tested up to: 4.1
+Stable tag: 4.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Pro Features:
 * Generate Strong Passwords - Generate strong passwords right from your profile screen
 * Dashboard Widget - manage important tasks such as user banning and system scans right from the WordPress dashboard.
 * GeoIP banning - coming soon
+* Online file comparison - When a file change is detected it will scan the origin of the files to determine if the change was malicious or not. Currently works only in WordPress core but plugins and themes are coming.
+* Temporary privilege escalation - give a contractor or someone else temporary admin or editor access to your site that will automatically reset itself.
+* wp-cli integration - Manage your site's security from the command line.
 
 = iThemes Sync Integration =
 
@@ -191,6 +194,41 @@ Free support may be available with the help of the community in the <a href="htt
 5. Easy-to-navigate Security dashboard
 
 == Changelog ==
+
+= 4.5.2 =
+* New Pro Feature: wp-cli integration
+* New Feature: Temporarily whitelist your IP address via iThemes Sync
+* New Feature: Override proxy IP detection
+* New feature: Hide admin bar (if desired)
+* New Feature: Perform file scan via iThemes Sync
+* New Feature: Perform malware scan via iThemes Sync
+* Enhancement: Added filter to allow for custom log pages
+* Enhancement: Added debug constant to help troubleshoot multiple emails
+* Enhancement: Added constant to force digest emails via wp-cron instead of custom timing
+* Fixed: Various missing variable fixes were added
+* Fixed: MySQL errors on MySQL 5.6 during activation were fixed.
+* Fixed: HTML emails now contain HTML tag
+* Fixed: Lockout count in emails should now be more accurate
+* Fixed: Make sure to esc urls on SSL redirects (unreported minor security fix)
+* Fixed: Added filters to SSL to try to catch more assets
+* Fixed: Suspicious query strings feature should no longer conflict with many plugins
+* Fixed: File change detection should no longer throw an error if opendir failed
+
+= 4.4.23 =
+* Fixed: App passwords in two-factor authentication will now correctly authenticate themselves.
+
+= 4.4.22 =
+* New Pro Feature: Temporary privilege escalation
+
+= 4.4.21 =
+* Enhancement: More time/date information is now shown in the logs for file change scanning
+* Fixed: Filechange will no longer show false positives with every change in DST (although this will cause run round of such notifications on update).
+* Fixed: Link to malware scanning logs will work.
+
+= 4.4.20 =
+* New Pro Feature: File change scanning will now compare WordPress core files to the WordPress.org repository.
+* Fixed: Make sure php_gid is always defined to prevent error message if the function is not usable.
+* Fixed: Link to BackupBuddy in admin bar will now work correctly.
 
 = 4.4.18 =
 * New Pro Feature: Dashboard widget. Get important information and handle user blocking right from the WordPress Dashboard.
@@ -1304,6 +1342,18 @@ This release is a complete rewrite from the ground up. Special thanks to Cory Mi
 * First alpha release including simple feature set.
 
 == Upgrade Notice ==
+
+= 4.5.2 =
+Version 4.5.2 is a feature and bug-fix release addressing numerous minor bugs affecting some users. It is recommended for all users.
+
+= 4.4.23 =
+Version 4.4.23 contains a security update and is recommended for all users.
+
+= 4.4.21 =
+Version 4.4.21 contains a fix to an issue that affects daylight savings time as well as other minor bug fixes. It is recommended for all users.
+
+= 4.4.20 =
+Version 4.4.20 contains a minor bugfix and is recommended for all users.
 
 = 4.4.18 =
 Version 4.4.18 contains a minor bugfix and is recommended for all users.

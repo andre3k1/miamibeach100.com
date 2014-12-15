@@ -49,10 +49,10 @@ class ITSEC_Tweaks_Admin {
 		);
 
 		$this->core->add_toc_item(
-		           array(
-			           'id'    => $id,
-			           'title' => $title,
-		           )
+			array(
+				'id'    => $id,
+				'title' => $title,
+			)
 		);
 
 		$id    = 'tweaks_wordpress';
@@ -68,10 +68,10 @@ class ITSEC_Tweaks_Admin {
 		);
 
 		$this->core->add_toc_item(
-		           array(
-			           'id'    => $id,
-			           'title' => $title,
-		           )
+			array(
+				'id'    => $id,
+				'title' => $title,
+			)
 		);
 
 		if ( is_multisite() ) {
@@ -89,10 +89,10 @@ class ITSEC_Tweaks_Admin {
 			);
 
 			$this->core->add_toc_item(
-			           array(
-				           'id'    => $id,
-				           'title' => $title,
-			           )
+				array(
+					'id'    => $id,
+					'title' => $title,
+				)
 			);
 
 		}
@@ -837,11 +837,15 @@ class ITSEC_Tweaks_Admin {
 					          "\tif (\$args ~* \"mosConfig_[a-zA-Z_]{1,21}(=|%3D)\") { set \$susquery 1; }" . PHP_EOL .
 					          "\tif (\$args ~* \"base64_encode\") { set \$susquery 1; }" . PHP_EOL .
 					          "\tif (\$args ~* \"(%24&x)\") { set \$susquery 1; }" . PHP_EOL .
-					          "\tif (\$args ~* \"(&#x22;|&#x27;|&#x3C;|&#x3E;|&#x5C;|&#x7B;|&#x7C;|%24&x)\"){ set \$susquery 1; }" . PHP_EOL .
 					          "\tif (\$args ~* \"(127.0)\") { set \$susquery 1; }" . PHP_EOL .
 					          "\tif (\$args ~* \"(globals|encode|localhost|loopback)\") { set \$susquery 1; }" . PHP_EOL .
 					          "\tif (\$args ~* \"(request|insert|concat|union|declare)\") { set \$susquery 1; }" . PHP_EOL .
-					          "\tif (\$susquery = 1) { return 403; }" . PHP_EOL;
+					          "\tif (\$args !~ \"^loggedout=true\"){ set \$susquery 0; }" . PHP_EOL .
+					          "\tif (\$args !~ \"^action=jetpack-sso\"){ set \$susquery 0; }" . PHP_EOL .
+					          "\tif (\$args !~ \"^action=rp\"){ set \$susquery 0; }" . PHP_EOL .
+					          "\tif (\$http_cookie !~ \"^.*wordpress_logged_in_.*\$\"){ set \$susquery 0; }" . PHP_EOL .
+					          "\tif (\$http_referer !~ \"^http://maps.googleapis.com(.*)\$\"){ set \$susquery 0; }" . PHP_EOL .
+					          "\tif (\$susquery = 1) { return 403; } " . PHP_EOL;
 
 				} else { //rules for all other servers
 
@@ -855,8 +859,6 @@ class ITSEC_Tweaks_Admin {
 					          "\tRewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]" . PHP_EOL .
 					          "\tRewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|%3D) [NC,OR]" . PHP_EOL .
 					          "\tRewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [NC,OR]" . PHP_EOL .
-					          "\tRewriteCond %{QUERY_STRING} ^.*(\[|\]|\(|\)|<|>|ê|\"|;|\?|\*|=$).* [NC,OR]" . PHP_EOL .
-					          "\tRewriteCond %{QUERY_STRING} ^.*(&#x22;|&#x27;|&#x3C;|&#x3E;|&#x5C;|&#x7B;|&#x7C;).* [NC,OR]" . PHP_EOL .
 					          "\tRewriteCond %{QUERY_STRING} ^.*(%24&x).* [NC,OR]" . PHP_EOL .
 					          "\tRewriteCond %{QUERY_STRING} ^.*(127\.0).* [NC,OR]" . PHP_EOL .
 					          "\tRewriteCond %{QUERY_STRING} ^.*(globals|encode|localhost|loopback).* [NC,OR]" . PHP_EOL .
@@ -1048,7 +1050,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( ITSEC_Lib::get_server() != 'nginx' ) {
 
@@ -1072,7 +1074,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( isset( $this->settings['request_methods'] ) && $this->settings['request_methods'] === true ) {
 
@@ -1092,7 +1094,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( isset( $this->settings['suspicious_query_strings'] ) && $this->settings['suspicious_query_strings'] === true ) {
 
@@ -1112,7 +1114,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( isset( $this->settings['non_english_characters'] ) && $this->settings['non_english_characters'] === true ) {
 
@@ -1132,7 +1134,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( isset( $this->settings['long_url_strings'] ) && $this->settings['long_url_strings'] === true ) {
 
@@ -1152,7 +1154,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( isset( $this->settings['write_permissions'] ) && $this->settings['write_permissions'] === true ) {
 
@@ -1172,7 +1174,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( isset( $this->settings['generator_tag'] ) && $this->settings['generator_tag'] === true ) {
 
@@ -1192,7 +1194,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( isset( $this->settings['wlwmanifest_header'] ) && $this->settings['wlwmanifest_header'] === true ) {
 
@@ -1212,7 +1214,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( isset( $this->settings['edituri_header'] ) && $this->settings['edituri_header'] === true ) {
 
@@ -1232,7 +1234,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( is_multisite() ) {
 
@@ -1254,7 +1256,7 @@ class ITSEC_Tweaks_Admin {
 
 			}
 
-			array_push( $statuses[$status_array], $status );
+			array_push( $statuses[ $status_array ], $status );
 
 			if ( isset( $this->settings['plugin_updates'] ) && $this->settings['plugin_updates'] === true ) {
 
@@ -1274,7 +1276,7 @@ class ITSEC_Tweaks_Admin {
 
 			}
 
-			array_push( $statuses[$status_array], $status );
+			array_push( $statuses[ $status_array ], $status );
 
 			if ( isset( $this->settings['core_updates'] ) && $this->settings['core_updates'] === true ) {
 
@@ -1294,7 +1296,7 @@ class ITSEC_Tweaks_Admin {
 
 			}
 
-			array_push( $statuses[$status_array], $status );
+			array_push( $statuses[ $status_array ], $status );
 
 		}
 
@@ -1316,7 +1318,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( isset( $this->settings['random_version'] ) && $this->settings['random_version'] === true ) {
 
@@ -1336,7 +1338,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( isset( $this->settings['file_editor'] ) && $this->settings['file_editor'] === true ) {
 
@@ -1356,7 +1358,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( isset( $this->settings['disable_xmlrpc'] ) && $this->settings['disable_xmlrpc'] === 2 ) {
 
@@ -1384,7 +1386,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( isset( $this->settings['uploads_php'] ) && $this->settings['uploads_php'] === true ) {
 
@@ -1404,7 +1406,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		$safe_jquery = ITSEC_Lib::safe_jquery_version();
 
@@ -1434,7 +1436,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( isset( $this->settings['force_unique_nicename'] ) && $this->settings['force_unique_nicename'] === true ) {
 
@@ -1454,7 +1456,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( isset( $this->settings['login_errors'] ) && $this->settings['login_errors'] === true ) {
 
@@ -1474,7 +1476,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		if ( isset( $this->settings['disable_unused_author_pages'] ) && $this->settings['disable_unused_author_pages'] === true ) {
 
@@ -1494,7 +1496,7 @@ class ITSEC_Tweaks_Admin {
 
 		}
 
-		array_push( $statuses[$status_array], $status );
+		array_push( $statuses[ $status_array ], $status );
 
 		return $statuses;
 
@@ -1966,7 +1968,7 @@ class ITSEC_Tweaks_Admin {
 		foreach ( $config_rules as $key => $rule ) {
 
 			if ( isset( $rule['name'] ) && $rule['name'] == 'Tweaks' ) {
-				unset ( $config_rules[$key] );
+				unset ( $config_rules[ $key ] );
 			}
 
 		}
@@ -1993,7 +1995,7 @@ class ITSEC_Tweaks_Admin {
 		foreach ( $rewrite_rules as $key => $rule ) {
 
 			if ( isset( $rule['name'] ) && $rule['name'] == 'Tweaks' ) {
-				unset ( $rewrite_rules[$key] );
+				unset ( $rewrite_rules[ $key ] );
 			}
 
 		}

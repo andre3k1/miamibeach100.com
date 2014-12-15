@@ -19,15 +19,16 @@ class ITSEC_File_Change {
 			$itsec_globals['ithemes_log_dir'],
 			'.lock',
 		);
+		$interval       = 86400; //Run daily
 
-		add_filter( 'itsec_logger_modules', array( $this, 'register_logger' ) );
-
-		// If we're splitting the file check run it every 6 hours. Else daily.
+		// If we're splitting the file check run it every 6 hours.
 		if ( isset( $this->settings['split'] ) && $this->settings['split'] === true ) {
 			$interval = 12342;
-		} else {
-			$interval = 86400;
 		}
+
+		add_filter( 'itsec_logger_modules', array( $this, 'itsec_logger_modules' ) );
+		add_filter( 'itsec_sync_modules', array( $this, 'itsec_sync_modules' ) ); //register sync modules
+		add_action( 'itsec_execute_file_check_cron', array( $this, 'execute_file_check' ) ); //Action to execute during a cron run.
 
 		if (
 			( ! defined( 'DOING_AJAX' ) || DOING_AJAX === false ) &&
@@ -37,27 +38,29 @@ class ITSEC_File_Change {
 			( $itsec_globals['current_time'] - $interval ) > $this->settings['last_run'] &&
 			( ! defined( 'ITSEC_FILE_CHECK_CRON' ) || ITSEC_FILE_CHECK_CRON === false )
 		) {
+
 			wp_clear_scheduled_hook( 'itsec_file_check' );
 			add_action( 'init', array( $this, 'execute_file_check' ) );
-		}
 
-		//Use Cron if registered
-		if ( defined( 'ITSEC_FILE_CHECK_CRON' ) && ITSEC_FILE_CHECK_CRON === true && ! wp_next_scheduled( 'itsec_execute_file_check_cron' ) ) {
+		} elseif ( defined( 'ITSEC_FILE_CHECK_CRON' ) && ITSEC_FILE_CHECK_CRON === true && ! wp_next_scheduled( 'itsec_execute_file_check_cron' ) ) { //Use cron if needed
+
 			wp_schedule_event( time(), 'daily', 'itsec_execute_file_check_cron' );
-		}
 
-		add_action( 'itsec_execute_file_check_cron', array( $this, 'execute_file_check' ) );
+		}
 
 	}
 
 	/**
 	 * Executes file checking
 	 *
-	 * @param bool $scheduled_call [optional] is this an automatic check
+	 * @since 4.0
+	 *
+	 * @param bool $scheduled_call [optional] true if this is an automatic check
+	 * @param bool $data whether to return a data array (true) or not (false)
 	 *
 	 * @return mixed
 	 **/
-	public function execute_file_check( $scheduled_call = true ) {
+	public function execute_file_check( $scheduled_call = true, $data = false ) {
 
 		global $itsec_files, $itsec_logger, $itsec_globals;
 
@@ -141,10 +144,16 @@ class ITSEC_File_Change {
 					if ( array_key_exists( $current_file, $logged_minus_deleted ) ) {
 
 						//if attributes differ added to changed files array
-						if ( ( ( isset( $current_attr['mod_date'] ) && strcmp( $current_attr['mod_date'], $logged_minus_deleted[$current_file]['mod_date'] ) != 0 ) || strcmp( $current_attr['d'], $logged_minus_deleted[$current_file]['d'] ) != 0 ) || ( ( isset( $current_attr['hash'] ) && strcmp( $current_attr['hash'], $logged_minus_deleted[$current_file]['hash'] ) != 0 ) || strcmp( $current_attr['h'], $logged_minus_deleted[$current_file]['h'] ) != 0 ) ) {
+						if ( ( ( isset( $current_attr['mod_date'] ) && strcmp( $current_attr['mod_date'], $logged_minus_deleted[ $current_file ]['mod_date'] ) != 0 ) || strcmp( $current_attr['d'], $logged_minus_deleted[ $current_file ]['d'] ) != 0 ) || ( ( isset( $current_attr['hash'] ) && strcmp( $current_attr['hash'], $logged_minus_deleted[ $current_file ]['hash'] ) != 0 ) || strcmp( $current_attr['h'], $logged_minus_deleted[ $current_file ]['h'] ) != 0 ) ) {
 
-							$files_changed[$current_file]['h'] = isset( $current_attr['hash'] ) ? $current_attr['hash'] : $current_attr['h'];
-							$files_changed[$current_file]['d'] = isset( $current_attr['mod_date'] ) ? $current_attr['mod_date'] : $current_attr['d'];
+							$remote_check = apply_filters( 'itsec_process_changed_file', true, $current_file, $current_attr['h'] ); //hook to run actions on a changed file at time of discovery
+
+							if ( $remote_check === true ) { //don't list the file if it matches the WordPress.org hash
+
+								$files_changed[ $current_file ]['h'] = isset( $current_attr['hash'] ) ? $current_attr['hash'] : $current_attr['h'];
+								$files_changed[ $current_file ]['d'] = isset( $current_attr['mod_date'] ) ? $current_attr['mod_date'] : $current_attr['d'];
+
+							}
 
 						}
 
@@ -157,6 +166,17 @@ class ITSEC_File_Change {
 				$files_deleted_count = sizeof( $files_removed );
 				$files_changed_count = sizeof( $files_changed );
 
+				if ( $files_added_count > 0 ) {
+
+					$files_added       = apply_filters( 'itsec_process_added_files', $files_added ); //hook to run actions on all files added
+					$files_added_count = sizeof( $files_added );
+
+				}
+
+				if ( $files_deleted_count > 0 ) {
+					do_action( 'itsec_process_removed_files', $files_removed ); //hook to run actions on all files removed
+				}
+
 				//create single array of all changes
 				$full_change_list = array(
 					'added'   => $files_added,
@@ -165,6 +185,12 @@ class ITSEC_File_Change {
 				);
 
 				update_site_option( $db_field, $current_files );
+
+				//Cleanup variables when we're done with them
+				unset( $files_added );
+				unset( $files_removed );
+				unset( $files_changed );
+				unset( $current_files );
 
 				$this->settings['last_run']   = $itsec_globals['current_time'];
 				$this->settings['last_chunk'] = $chunk;
@@ -180,9 +206,9 @@ class ITSEC_File_Change {
 				$full_change_list['memory'] = round( ( $memory_used / 1000000 ), 2 );
 
 				$itsec_logger->log_event(
-				             'file_change',
-				             8,
-				             $full_change_list
+					'file_change',
+					8,
+					$full_change_list
 				);
 
 				if ( $send_email === true && $scheduled_call !== false && isset( $this->settings['email'] ) && $this->settings['email'] === true && ( $files_added_count > 0 || $files_changed_count > 0 || $files_deleted_count > 0 ) ) {
@@ -207,13 +233,23 @@ class ITSEC_File_Change {
 
 					$this->running = false;
 
-					return true;
+					//There were changes found
+					if ( $data === true ) {
+
+						return $full_change_list;
+
+					} else {
+
+						return true;
+
+					}
+
 
 				} else {
 
 					$this->running = false;
 
-					return false;
+					return false; //No changes were found
 
 				}
 
@@ -221,7 +257,7 @@ class ITSEC_File_Change {
 
 			$this->running = false;
 
-			return - 1;
+			return - 1; //An error occured
 
 		}
 
@@ -230,10 +266,11 @@ class ITSEC_File_Change {
 	/**
 	 * Get Report Details
 	 *
+	 * @since 4.0
+	 *
 	 * @param array $email_details array of details to build email
 	 *
 	 * @return string report details
-	 *
 	 **/
 	function get_email_report( $email_details ) {
 
@@ -348,10 +385,11 @@ class ITSEC_File_Change {
 	 *
 	 * Checks if given file should be included in file check based on exclude/include options
 	 *
+	 * @since 4.0
+	 *
 	 * @param string $file path of file to check from site root
 	 *
 	 * @return bool true if file should be checked false if not
-	 *
 	 **/
 	private function is_checkable_file( $file ) {
 
@@ -413,11 +451,13 @@ class ITSEC_File_Change {
 	/**
 	 * Register 404 and file change detection for logger
 	 *
+	 * @since 4.0
+	 *
 	 * @param  array $logger_modules array of logger modules
 	 *
-	 * @return array                   array of logger modules
+	 * @return array array of logger modules
 	 */
-	public function register_logger( $logger_modules ) {
+	public function itsec_logger_modules( $logger_modules ) {
 
 		$logger_modules['file_change'] = array(
 			'type'     => 'file_change',
@@ -425,6 +465,28 @@ class ITSEC_File_Change {
 		);
 
 		return $logger_modules;
+
+	}
+
+	/**
+	 * Register malware for Sync
+	 *
+	 * @since 4.0
+	 *
+	 * @param  array $sync_modules array of malware modules
+	 *
+	 * @return array array of sync modules
+	 */
+	public function itsec_sync_modules( $sync_modules ) {
+
+		$sync_modules['file-change'] = array(
+			'verbs' => array(
+				'itsec-perform-file-scan' => 'Ithemes_Sync_Verb_ITSEC_Perform_File_Scan',
+			),
+			'path'  => dirname( __FILE__ ),
+		);
+
+		return $sync_modules;
 
 	}
 
@@ -450,16 +512,16 @@ class ITSEC_File_Change {
 			$dirs = array(
 				'wp-admin/',
 				'wp-includes/',
-				$content_dir[sizeof( $content_dir ) - 1] . '/',
-				$content_dir[sizeof( $content_dir ) - 1] . '/uploads/',
-				$content_dir[sizeof( $content_dir ) - 1] . '/themes/',
-				$content_dir[sizeof( $content_dir ) - 1] . '/' . $plugin_dir[sizeof( $plugin_dir ) - 1] . '/',
+				$content_dir[ sizeof( $content_dir ) - 1 ] . '/',
+				$content_dir[ sizeof( $content_dir ) - 1 ] . '/uploads/',
+				$content_dir[ sizeof( $content_dir ) - 1 ] . '/themes/',
+				$content_dir[ sizeof( $content_dir ) - 1 ] . '/' . $plugin_dir[ sizeof( $plugin_dir ) - 1 ] . '/',
 				''
 			);
 
-			$path = $dirs[$chunk];
+			$path = $dirs[ $chunk ];
 
-			unset( $dirs[$chunk] );
+			unset( $dirs[ $chunk ] );
 
 			$this->excludes = $dirs;
 
@@ -471,9 +533,9 @@ class ITSEC_File_Change {
 
 		$clean_path = sanitize_text_field( $path );
 
-		if ( $directory_handle = opendir( ITSEC_Lib::get_home_path() . $clean_path ) ) { //get the directory
+		if ( $directory_handle = @opendir( ITSEC_Lib::get_home_path() . $clean_path ) ) { //get the directory
 
-			while ( ( $item = readdir( $directory_handle ) ) !== false ) { // loop through dirs
+			while ( ( $item = @readdir( $directory_handle ) ) !== false ) { // loop through dirs
 
 				if ( $item != '.' && $item != '..' ) { //don't scan parent/etc
 
@@ -497,9 +559,9 @@ class ITSEC_File_Change {
 
 						} else { //is file so add to array
 
-							$data[$relname]      = array();
-							$data[$relname]['d'] = @filemtime( $absname ) + $time_offset;
-							$data[$relname]['h'] = @md5_file( $absname );
+							$data[ $relname ]      = array();
+							$data[ $relname ]['d'] = @filemtime( $absname );
+							$data[ $relname ]['h'] = @md5_file( $absname );
 
 						}
 
@@ -519,6 +581,8 @@ class ITSEC_File_Change {
 
 	/**
 	 * Builds and sends notification email
+	 *
+	 * @since 4.0
 	 *
 	 * @param array $email_details array of details for the email messge
 	 *
@@ -567,6 +631,8 @@ class ITSEC_File_Change {
 
 	/**
 	 * Set HTML content type for email
+	 *
+	 * @since 4.0
 	 *
 	 * @return string html content type
 	 */
