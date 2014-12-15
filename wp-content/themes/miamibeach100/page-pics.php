@@ -1,3 +1,4 @@
+
 <?php get_header(); ?>
 
 	<div class="vectors-left" data-stellar-ratio="1.1"><img src="<?php echo get_template_directory_uri(); ?>/img/vectors/vectors-left-pics-social.png" alt=""></div>
@@ -22,47 +23,53 @@
 			<h5 class="hued animscroll">The Present will be History --<br> so be a part of it!</h5>
 			<div class="vector-bg-right-small" data-stellar-ratio="1.1"></div>
 
-
-		<?php if(get_field('add_a_gallery')): ?>
-
 			<ul class="tile-grid animscroll">
 
-				<?php while(has_sub_field('add_a_gallery')): ?>
-					<li>
-						<div class="view view-one">
+			<?php 	
+
+				$rowsArray = get_field('add_a_gallery');
+				$rows = array_reverse($rowsArray);
+
+				if($rows) {
+
+				foreach($rows as $row) {
+
+			?>
+				<li>
+					<div class="view view-one">
 
 						<?php 
-							$images = get_sub_field('event_images');
+							$images = $row['event_images'];
 							$thumb = $images[0]; 
 						?>
 
-						<?php  if( $images ): ?>
+						<?php  if( $images ): ?>												
 
-							<img src="<?php echo $thumb['sizes']['sponsor-sqaure']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<img src="<?php echo $thumb['sizes']['sponsor-sqaure']; ?>" alt="<?php echo $image['alt']; ?>" />						
 
-							<div class="mask">
-								<a href="<?php echo $thumb['url']; ?>" class="lightbox" data-lightbox-gallery="events-gallery"><h2>View Album</h2></a>
-							</div>
+						<div class="mask">
+							<a href="<?php echo $thumb['url']; ?>" class="lightbox" data-lightbox-gallery="events-gallery-<?php echo $row['event_name'];?>"><h2>View Album</h2></a>
+						</div>
 
-							<ul style="display:none;">
-							<?php 
-								$head = array_shift($images);
-								foreach( $images as $image ): ?>
-								<li><a href="<?php echo $image['url']; ?>" class="lightbox" data-lightbox-gallery="events-gallery"></a></li>
-							<?php endforeach; ?>
-							</ul>
+						<ul style="display:none;">
+						<?php 
+							$head = array_shift($images);
+							foreach( $images as $image ): ?>
+							<li><a href="<?php echo $image['url']; ?>" class="lightbox" data-lightbox-gallery="events-gallery-<?php echo $row['event_name'];?>"></a></li>
+						<?php endforeach; ?>
+
+						</ul>
+
 						<?php endif; ?>
 
-						</div>
-						<p class="thumb-link"><?php echo get_sub_field('event_name');?></p><p class="calendar"><?php echo get_sub_field('event_date');?></p>
+					</div>
+					<p class="thumb-link"><?php echo $row['event_name'];?></p><p class="calendar"><?php echo $row['event_date'];?></p>
 
-    				</li>
+				</li>
 
-    			<?php endwhile; ?>
+    			<?php } } ?>
 
   				</ul>
-
-		<?php endif; ?>
 
 			<div class="vector-bg-left-small-pics" data-stellar-ratio="1.1"></div>
 
