@@ -1,3 +1,4 @@
+*.bk
 *~
 .directory
 .DS_Store

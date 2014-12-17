@@ -4,7 +4,7 @@ WP_DIR="/var/www/vhosts/gsnb-kgxx.accessdomain.com/httpdocs"
 BK_DIR="/tmp/miamibeach100.com-backups"
 
 DB_USER="wp"
-DB_PASS="Miamibeach@305!"
+DB_PASS='Miamibeach@305!'
 DB_NAME="miamibeach100-wp"
 
 CURRENT_TIME=$(date +"%Y-%m-%d-%H%M")
@@ -20,7 +20,7 @@ cd "$BK_DIR"
 WWW_TRANSFORM='s,^var/www/vhosts/gsnb-kgxx.accessdomain.com/httpdocs,www,'
 DB_TRANSFORM='s,^tmp/miamibeach100.com-backups,database,'
 
-mysqldump -u$DB_USER -p$DB_PASS -$DB_NAME > $BK_DIR/$DB_DUMP
+mysqldump -u$DB_USER -p$DB_PASS --databases $DB_NAME > $BK_DIR/$DB_DUMP
 
 tar -cvf $BK_DIR/$BK_FILE --transform $WWW_TRANSFORM $WP_DIR
 tar --append --file=$BK_DIR/$BK_FILE --transform $DB_TRANSFORM $BK_DIR/$DB_DUMP
