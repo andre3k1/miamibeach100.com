@@ -916,6 +916,10 @@ section.countDown {
 		@extend %ptb60;
 		text-align: center;
 	}
+
+	a:hover {
+		color: #c075c6;
+	}
 }
 
 ul.contact-grid {
@@ -932,7 +936,7 @@ ul.contact-grid {
 
 	a  { display: block;}
 
-	i  { 
+	li> i  { 
 		width: 50px;
 		height: 50px;
 		text-align: center;
@@ -952,6 +956,7 @@ p.contact-items {
 	text-align: left;
 	line-height: 20rem;
 	font-size: 13rem;
+	vertical-align: top;
 	@extend %mlr15;
 
 	span {

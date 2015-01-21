@@ -25,28 +25,29 @@
 
 			<ul class="contact-grid animscroll">
 				<li>
-					<i class="fa fa-map-marker"></i>
+					<i class="fa fa-suitcase"></i>
 					<p class="contact-items"><span>Sponsorship Opportunities</span><br/>
 						<a href="mailto:sponsorship@miamibeach100.com">sponsorship@miamibeach100.com</a>
 						or call (305) 341-7899
 					</p>
 				</li>
 				<li>
-					<i class="fa fa-map-marker"></i>
+					<i class="fa fa-pencil"></i>
 					<p class="contact-items"><span>PR & Press Inquiries</span><br/>
-						<a href="mailto:press@miamibeach100.com">press@miamibeach100.com</a>
+						<a href="mailto:press@miamibeach100.com">press@miamibeach100.com&nbsp;</a>
 						or call (305) 341-7899
 					</p>
 				</li>
 				<li>
-					<i class="fa fa-map-marker"></i>
+					<i class="fa fa-users"></i>
 					<p class="contact-items"><span>To Volunteer</span><br/>
-						<a href="mailto:volunteer@miamibeach100.com">volunteer@miamibeach100.com&nbsp;</a>
-						or call (305) 538-3809
+						<a href="mailto:volunteer@miamibeach100.com">volunteer@miamibeach100.com&nbsp;&nbsp;&nbsp;</a>
+						or call (305) 538-3809 <br>
+						<a target="_blank" href="http://goo.gl/forms/qk47Lt91QM">Start Application <i class="fa fa-chevron-right"></i></a>
 					</p>
 				</li>
 				<li>
-					<i class="fa fa-map-marker"></i>
+					<i class="fa fa-ticket"></i>
 					<p class="contact-items"><span>Tickets for Events</span><br/>
 						<a href="mailto:events@miamibeach100.com">events@miamibeach100.com</a>
 						or call (305) 538-3809
