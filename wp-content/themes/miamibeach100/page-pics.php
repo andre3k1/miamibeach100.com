@@ -25,22 +25,21 @@
 
 			<ul class="tile-grid animscroll">
 
-			<?php 	
+				<?php 
+					$temp = $wp_query; 
+					$wp_query = null; 
+					$wp_query = new WP_Query(); 
+					$wp_query->query('post_type=pics'.'&paged='.$paged); 
 
-				$rowsArray = get_field('add_a_gallery');
-				$rows = array_reverse($rowsArray);
+					while ($wp_query->have_posts()) : $wp_query->the_post(); 
+				?>	
 
-				if($rows) {
-
-				foreach($rows as $row) {
-
-			?>
 				<li>
 					<div class="view view-one">
 
 						<?php 
-							$images = $row['event_images'];
-							$thumb = $images[0]; 
+							$images = get_field('event_images');
+							$thumb = $images[0];
 						?>
 
 						<?php  if( $images ): ?>												
@@ -63,11 +62,16 @@
 						<?php endif; ?>
 
 					</div>
-					<p class="thumb-link"><?php echo $row['event_name'];?></p><p class="calendar"><?php echo $row['event_date'];?></p>
+					<p class="thumb-link"><?php the_title(); ?></p><p class="calendar"><?php echo get_field('event_date');?></p>
 
 				</li>
 
-    			<?php } } ?>
+				<?php endwhile; ?>
+
+				<?php 
+					$wp_query = null; 
+					$wp_query = $temp;  // Reset
+				?>				
 
   				</ul>
 
