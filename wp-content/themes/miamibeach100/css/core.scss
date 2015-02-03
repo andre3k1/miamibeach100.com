@@ -1349,6 +1349,10 @@ div.wpcf7 .placeheld {
 	}
 }
 
+#tribe-events p strong {
+	font-weight: bold;
+}
+
 @media only screen and (max-width: 500px) { 
 
 	.tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"]>a {
