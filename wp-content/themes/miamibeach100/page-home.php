@@ -117,7 +117,7 @@
 					<span class="name-part title">Celebrating </span> <span class="name-part animRight">1OO </span><span class="other"> Years</span>
 				</h1>
 				<h2 class="subtitle">of Miami Beach</h2>
-				<a href="#opt-in" class="btn">Learn More &nbsp;&nbsp;<i class="fa fa-angle-down fa-lg"></i></a>
+				<a href="http://miamibeach100.com/event/miami-beach-100-hour-centennial-celebration/" class="btn">Learn More &nbsp;&nbsp;<i class="fa fa-angle-down fa-lg"></i></a>
 				<!-- <a href="<?php get_site_url(); ?>/about/" class="btn">Learn More &nbsp;&nbsp;<i class="fa fa-angle-down fa-lg"></i></a> -->
 			</div>
 		</div>
