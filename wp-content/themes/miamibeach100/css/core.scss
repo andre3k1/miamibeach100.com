@@ -1,4 +1,4 @@
-/* ///////////////////////////////////////////////////////////////////// 
+/* /////////////////////////////////////////////////////////////////////
 // HEADER
 /////////////////////////////////////////////////////////////////////*/
 
@@ -18,7 +18,7 @@ header {
 		&:hover {
 			opacity: .6;
 		}
-	}	
+	}
 
 	nav {
 		font-family: Raleway;
@@ -59,7 +59,7 @@ header {
 				border-radius: 50px;
 				z-index: 0;
 				opacity: 0;
-				box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);	
+				box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
 				background: #fefeff; /* Old browsers */
 				background: -moz-linear-gradient(top,  #fefeff 0%, #d0dce8 100%); /* FF3.6+ */
 				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefeff), color-stop(100%,#d0dce8)); /* Chrome,Safari4+ */
@@ -67,16 +67,16 @@ header {
 				background: -o-linear-gradient(top,  #fefeff 0%,#d0dce8 100%); /* Opera 11.10+ */
 				background: -ms-linear-gradient(top,  #fefeff 0%,#d0dce8 100%); /* IE10+ */
 				background: linear-gradient(to bottom,  #fefeff 0%,#d0dce8 100%); /* W3C */
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefeff', endColorstr='#d0dce8',GradientType=0 ); /* IE6-9 */					
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefeff', endColorstr='#d0dce8',GradientType=0 ); /* IE6-9 */
 			}
 
 			&.mobile-nav {
 				display: none;
-				a {				
+				a {
 					font-weight: 500;
 					font-size: 16rem;
 					color: #d887df !important;
-				}			
+				}
 			}
 
 			@media (min-width:$site-width) {
@@ -87,11 +87,11 @@ header {
 
 				&.current-menu-item::before {
 					opacity: 1;
-				}		
+				}
 
 				&:hover::before  {
 					opacity: 1;
-				}							
+				}
 
 			}
 
@@ -100,12 +100,12 @@ header {
 			}
 
 		}
-	
+
 	}
 
 }
 
-/* ///////////////////////////////////////////////////////////////////// 
+/* /////////////////////////////////////////////////////////////////////
 // HOME
 /////////////////////////////////////////////////////////////////////*/
 
@@ -144,19 +144,19 @@ ul.social.main {
 	list-style: none;
 	padding: 0;
 	margin-top: 18px;
-	
+
 	li {
 	@include inline-block;
 	margin: 0 17px;
 
-		i {transition: opacity .2s linear;}		
+		i {transition: opacity .2s linear;}
 
-		a:hover i {opacity: .7 !important;}	
-	
+		a:hover i {opacity: .7 !important;}
+
 		a {display: block; transition: opacity .2s linear;}
 
-		i {font-size: 20rem; color: $site-bg-color;}		
-		
+		i {font-size: 20rem; color: $site-bg-color;}
+
 	}
 
 }
@@ -246,8 +246,8 @@ section.countDown {
 	text-align: center;
 
 	input {
-		width: 100%; 
-		height: 39px; 
+		width: 100%;
+		height: 39px;
 		background-color: transparent;
 		box-sizing: border-box;
 		padding-left: 10px;
@@ -341,14 +341,14 @@ section.countDown {
 	margin-top: 10px;
 	line-height: 22px;
 
-	p { color: red; }	
+	p { color: red; }
 }
 
 .result {
 	margin-top: 10px;
 	line-height: 22px;
 
-	p { color: green; }	
+	p { color: green; }
 }
 
 #terms	{
@@ -368,7 +368,7 @@ section.countDown {
 	box-sizing: border-box;
 	background: url(../img/facts-bg.png) 0 0 no-repeat;
 	background-size: cover;
-	z-index: 1;	
+	z-index: 1;
 
 	.flexslider {
 		margin-top: 75px;
@@ -441,7 +441,7 @@ section.countDown {
 	ul.slides li a:hover {
 		color: lighten( $a-color-hued, 10% );
 		span {color: lighten( $a-color-hued, 10% );}
-	}	
+	}
 }
 
 .mayor {
@@ -493,13 +493,13 @@ section.countDown {
 		}
 
 		&.title {
-			font-size: 15rem;	
+			font-size: 15rem;
 		}
 	}
 
 }
 
-/* ///////////////////////////////////////////////////////////////////// 
+/* /////////////////////////////////////////////////////////////////////
 // ABOUT
 /////////////////////////////////////////////////////////////////////*/
 
@@ -574,7 +574,7 @@ section.countDown {
 	height: auto;
 	display: block;
 	margin: 0 auto;
-	@extend %mt60;
+	@extend %mt30;
 }
 
 #about-video {
@@ -584,7 +584,7 @@ section.countDown {
 }
 
 .slant.legend {
-	
+
 		.legend {
 			margin-top: 100px;
 		}
@@ -612,7 +612,7 @@ section.countDown {
 		font-style: italic;
 		color: #525252;
 		padding-bottom: 0px !important;
-	}	
+	}
 
 	/* Styles specific to this particular page */
 	.scroll-pane {
@@ -651,16 +651,16 @@ section.countDown {
 	::-webkit-scrollbar {
 	    height: 25px;
 	}
-	 
+
 	/* Track */
 	::-webkit-scrollbar-track {
 		-webkit-border-radius: 5px;
 	    border-radius: 5px;
-	    background: #e4e4e4; 
+	    background: #e4e4e4;
 	    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.5);
 	    width: 30px;
 	}
-	 
+
 	/* Handle */
 	::-webkit-scrollbar-thumb {
 	    background: #90d5d2;
@@ -685,7 +685,7 @@ section.countDown {
 		left: 0;
 		width: 100%;
 		height: 439px;
-		z-index:1;		
+		z-index:1;
 		background: url(../img/white-slant-flipped-y.png) bottom center no-repeat;
 	}
 }
@@ -727,7 +727,7 @@ section.countDown {
 
 	p {
 		line-height: 21rem;
-		margin-top: 20px;		
+		margin-top: 20px;
 	}
 }
 
@@ -739,7 +739,7 @@ section.countDown {
 
 }
 
-/* ///////////////////////////////////////////////////////////////////// 
+/* /////////////////////////////////////////////////////////////////////
 // BLOG
 /////////////////////////////////////////////////////////////////////*/
 
@@ -762,7 +762,7 @@ section.countDown {
 		font-size: 14rem;
 	}
 
-	.loop-content { 
+	.loop-content {
 		width: 100%;
 		margin-left: auto;
 	    margin-right: auto;
@@ -771,7 +771,7 @@ section.countDown {
 			font-size: 20rem;
 			line-height: 25rem;
 			text-align: justify;
-			@extend %mb20;	    	
+			@extend %mb20;
 	    }
 	}
 
@@ -780,7 +780,7 @@ section.countDown {
 		text-align: justify;
 		font-style: italic;
 		color: #525252;
-	}	
+	}
 
 	h3.blog-title {
 		font-size: 37rem;
@@ -868,12 +868,12 @@ section.countDown {
 
 	span, a {
 		display: inline-block;
-		@extend %mlr10;		
+		@extend %mlr10;
 		color: #c185b5;
 		font-family: "Montserrat";
 		font-weight: 700;
 		font-size: 25rem;
-		line-height: 55px;	
+		line-height: 55px;
 	}
 
 	a.next, a.prev {
@@ -886,7 +886,7 @@ section.countDown {
 
 }
 
-/* ///////////////////////////////////////////////////////////////////// 
+/* /////////////////////////////////////////////////////////////////////
 // CONTACT
 /////////////////////////////////////////////////////////////////////*/
 
@@ -936,7 +936,7 @@ ul.contact-grid {
 
 	a  { display: block;}
 
-	li> i  { 
+	li> i  {
 		width: 50px;
 		height: 50px;
 		text-align: center;
@@ -987,13 +987,13 @@ p.contact-items {
 		color: #c075c6;
 	}
 
-	::-moz-placeholder { /* Firefox 19+ */ 
+	::-moz-placeholder { /* Firefox 19+ */
 		font-size: 14rem;
-		color: #c075c6; 
+		color: #c075c6;
 	}
 
-	:-ms-input-placeholder { 
-		font-size: 14rem; 
+	:-ms-input-placeholder {
+		font-size: 14rem;
 		color: #c075c6;
 	}
 
@@ -1044,7 +1044,7 @@ p.contact-items {
 	cursor: pointer;
 }
 
-//ERRORS VALIDATION 
+//ERRORS VALIDATION
 div.wpcf7-validation-errors,
 div.wpcf7-spam-blocked,
 div.wpcf7-validation-errors {
@@ -1108,7 +1108,7 @@ span.wpcf7-not-valid-tip {
 	display: block;
 }
 
-.use-floating-validation-tip span.wpcf7-not-valid-tip { 
+.use-floating-validation-tip span.wpcf7-not-valid-tip {
 	position: absolute;
 	top: 20%;
 	left: 20%;
@@ -1130,7 +1130,7 @@ span.wpcf7-not-valid-tip {
 		@extend %mlr5;
 		font-size: 14rem;
 	}
-	
+
 	i { transition: opacity .2s linear; }
 
 	a:hover i { opacity: .7 !important; }
@@ -1168,7 +1168,7 @@ div.wpcf7 .placeheld {
 	color: #c075c6 !important;
 }
 
-/* ///////////////////////////////////////////////////////////////////// 
+/* /////////////////////////////////////////////////////////////////////
 // EVENTS
 /////////////////////////////////////////////////////////////////////*/
 
@@ -1228,7 +1228,7 @@ div.wpcf7 .placeheld {
 	p {
 		font-size: 25rem;
 		float: left;
-		line-height: 100rem;	
+		line-height: 100rem;
 	}
 
 	img {
@@ -1248,14 +1248,14 @@ div.wpcf7 .placeheld {
 	margin-top: 10px;
 	line-height: 22px;
 
-	p { color: red; }	
+	p { color: red; }
 }
 
 .result {
 	margin-top: 10px;
 	line-height: 22px;
 
-	p { color: green; }	
+	p { color: green; }
 }
 
 #terms	{
@@ -1353,7 +1353,7 @@ div.wpcf7 .placeheld {
 	font-weight: bold;
 }
 
-@media only screen and (max-width: 500px) { 
+@media only screen and (max-width: 500px) {
 
 	.tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"]>a {
 
@@ -1409,7 +1409,7 @@ div.wpcf7 .placeheld {
 	width: 64px;
 }
 
-/* ///////////////////////////////////////////////////////////////////// 
+/* /////////////////////////////////////////////////////////////////////
 // SOCIAL
 /////////////////////////////////////////////////////////////////////*/
 
@@ -1428,9 +1428,9 @@ div.wpcf7 .placeheld {
 	ul.social {
 		@extend ul.social-footer;
 		margin-top: 15px !important;
-		li a i { color: #4080a6; border: 2px solid #4080a6; } 
+		li a i { color: #4080a6; border: 2px solid #4080a6; }
 	}
-	
+
 }
 
 .wall-outer .dcsns-toolbar .filter { margin: 15px 0px 65px 0px; }
@@ -1484,7 +1484,7 @@ div.wpcf7 .placeheld {
 			height: 51px !important;
 			border-radius: 50% !important;
 		}
-		
+
 		&[rel="twitter"]::before { content: "\f099"; font-family: 'FontAwesome' !important; font-size: 25rem; line-height: 51px; }
 		&[rel="twitter"] {
 			background: transparent !important;
@@ -1500,14 +1500,14 @@ div.wpcf7 .placeheld {
 			height: 51px !important;
 			border-radius: 50% !important;
 		}
-	
+
 		&[rel="instagram"]::before { content: "\f16d"; font-family: 'FontAwesome' !important; font-size: 25rem; line-height: 51px; }
 		&[rel="instagram"] {
 			background: transparent !important;
 			width: 49px !important;
 			height: 51px !important;
 			border-radius: 50% !important;
-		}		
+		}
 
 	}
 
@@ -1517,23 +1517,76 @@ div.wpcf7 .placeheld {
 
 }
 
-/* ///////////////////////////////////////////////////////////////////// 
+/* /////////////////////////////////////////////////////////////////////
 // SPONSORS
 /////////////////////////////////////////////////////////////////////*/
 
 .slant.sponsors {
 	@extend %pb160;
 
+	.col-1 {
+		width: 50%;
+		float: left;
+	}
+
+	.col-2 {
+		width: 50%;
+		float: right;
+	}
+
+	.vsplit:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
 	h1 {
 		font-size: 37rem;
 		color: #4b96b1;
 		text-align: center;
-		margin-top: 30px;
+		@extend %mt80;
 	}
 
 	ul.tile-grid {
 		p.thumb-link {
 			font-size: 12rem;
+			@extend %mt10;
+		}
+	}
+
+	.tile-grid-large {
+		@extend .tile-grid;
+		li {
+			width: 225px !important;
+			height: 150px !important;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	.tile-grid-medium {
+		@extend .tile-grid;
+		li {
+			width: 150px !important;
+			height: 100px !important;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	.tile-grid-small {
+		@extend .tile-grid;
+		li {
+			width: 75px !important;
+			height: 50px !important;
+			img {
+				width: 100%;
+				height: 100%;
+			}
 		}
 	}
 
@@ -1567,8 +1620,8 @@ div.wpcf7 .placeheld {
 
 		h1 {
 			font-size: 30rem;
-			@extend %mt70;
-			@extend %mb20;
+			@extend %mt80;
+			@extend %mb25;
 		}
 
 		p {
@@ -1582,7 +1635,7 @@ div.wpcf7 .placeheld {
 
 }
 
-/* ///////////////////////////////////////////////////////////////////// 
+/* /////////////////////////////////////////////////////////////////////
 // PICS
 /////////////////////////////////////////////////////////////////////*/
 .slant.pics {
@@ -1638,7 +1691,7 @@ div.wpcf7 .placeheld {
 	width: 64px;
 }
 
-/* ///////////////////////////////////////////////////////////////////// 
+/* /////////////////////////////////////////////////////////////////////
 // FOOTER
 /////////////////////////////////////////////////////////////////////*/
 
@@ -1693,7 +1746,7 @@ footer {
 		left: 0;
 		width: 100%;
 		height: 439px;
-		z-index:1;		
+		z-index:1;
 		background: url(../img/white-slant-flipped.png) bottom center no-repeat;
 	}
 
@@ -1703,12 +1756,12 @@ ul.social-footer {
 	position: static;
 	margin-top: 0px;
 	@extend %mb35;
-	
+
 	li {
 		@include inline-block;
 		margin: 0 5px;
-	
-		i {transition: opacity .2s linear;}		
+
+		i {transition: opacity .2s linear;}
 
 		a:hover i {opacity: .7 !important;}
 
@@ -1723,12 +1776,12 @@ ul.social-footer {
 			color: $site-bg-color;
 			border: 2px solid $site-bg-color;
 			border-radius: 50%;
-		}	
+		}
 	}
 
 }
 
-/* ///////////////////////////////////////////////////////////////////// 
+/* /////////////////////////////////////////////////////////////////////
 // COMMON CLASSES/MODULES
 /////////////////////////////////////////////////////////////////////*/
 
@@ -1827,8 +1880,8 @@ a.btn {
 		width: 303px;
 		height: 200px;
 		display: inline-block;
-		margin: 0px 8.5px 30px 8.5px;
-		@extend %mt50;
+		margin: 0px 8.5px 0px 8.5px;
+		@extend %mt25;
 	}
 	a p.thumb-link {
 		@extend %pt25;
@@ -2013,7 +2066,7 @@ a.btn {
 	visibility:visible;
 }
 
-/* ///////////////////////////////////////////////////////////////////// 
+/* /////////////////////////////////////////////////////////////////////
 // ANIMATIONS
 /////////////////////////////////////////////////////////////////////*/
 
@@ -2082,7 +2135,7 @@ a.btn {
 	.animRight {
 		transform: translateX(-10%);
 		transition: transform 200ms ease, opacity 200ms 125ms;
-	}	
+	}
 
 	//Post Animation
 	&.is-expanded {
@@ -2122,7 +2175,7 @@ a.btn {
 
 	&.is-expanded .animRight {
 		transition: transform 200ms 200ms ease, opacity 200ms 125ms;
-	}	
+	}
 
 }
 
@@ -2250,7 +2303,7 @@ a.btn {
 	margin: 0 -3px 0 0;
 }
 
-/* ///////////////////////////////////////////////////////////////////// 
+/* /////////////////////////////////////////////////////////////////////
 // Thibault October, 16
 /////////////////////////////////////////////////////////////////////*/
 
