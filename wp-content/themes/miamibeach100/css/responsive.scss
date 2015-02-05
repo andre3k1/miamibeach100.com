@@ -1,4 +1,4 @@
-/* ///////////////////////////////////////////////////////////////////// 
+/* /////////////////////////////////////////////////////////////////////
 // VERTICAL
 /////////////////////////////////////////////////////////////////////*/
 
@@ -22,7 +22,7 @@
 
 }
 
-/* ///////////////////////////////////////////////////////////////////// 
+/* /////////////////////////////////////////////////////////////////////
 // HORIZONTAL
 /////////////////////////////////////////////////////////////////////*/
 
@@ -101,7 +101,7 @@
 	}
 
 	.main-parallax .container {text-align: center;}
-	
+
 	//ABOUT
 	.vector-about-video img,
 	.vector-about-video-right {
@@ -140,7 +140,7 @@
 	.opt-in {
 		height: auto;
 		padding-bottom: 10%;
-	}	
+	}
 
 	.opt-in-events {height: auto;}
 
@@ -181,7 +181,7 @@
 	.blurb-img {
 		max-width: 100%;
 		height: auto;
-	}	
+	}
 
 	.opt-in-info-events p {
 		float: none !important;
@@ -190,7 +190,7 @@
 	.opt-in-info-events img {
 		margin-top: 0px !important;
 	}
-	
+
 	.dont-forget {
 		display: none !important;
 	}
@@ -205,7 +205,7 @@
 
 	.main-parallax.home {
 		background: url(../img/cover-home-mobile.jpg) 0 0 no-repeat !important;
-	}	
+	}
 
 	.tagline {
 		float: none;
@@ -229,7 +229,7 @@
 
 	// PICS
 	.slant.pics p.thumb-link,
-	.slant.pics p.calendar { 
+	.slant.pics p.calendar {
 		text-align: center;
 	}
 
@@ -265,12 +265,12 @@
 	}
 
 	// SPONSORS
-	.slant.sponsors p.thumb-link { 
+	.slant.sponsors p.thumb-link {
 		text-align: center;
 	}
 
-	//Vector bg small 
-	.vector-bg-left-small { display: none !important; } 
+	//Vector bg small
+	.vector-bg-left-small { display: none !important; }
 
 	ul.contact-grid li {
 
@@ -291,12 +291,12 @@
 	}
 	.info-form i { margin-bottom: 0 !important;}
 	.info-form li { display: block; width: 100%; }
-	.info-form p.contact-info { display: block; }	
-	
+	.info-form p.contact-info { display: block; }
+
 }
 
 @media (min-width: 1000px)  {
-	
+
 	header nav li {margin: 0 4px !important;}
 
 	header nav li a,
@@ -307,7 +307,7 @@
 	.info-form li {
 		display: block;
 		padding-right: 0px;
-	}	
+	}
 
 	// .current-menu-item,
 	// .current_page_item {
@@ -385,7 +385,7 @@
 	.vector-bg-right-small, .vector-bg-left-small-pics,
 	.vector-bg-right-small-sponsors, .vector-bg-left-small-sponsors,
 	.vector-bg-left-small-social, .vector-bg-right-small-social, .vector-bg-left-small-social
-	 { display: none !important; } 	
+	 { display: none !important; }
 }
 
 @media (max-width:1300px) {
@@ -423,8 +423,8 @@
 		margin-top: -200px !important;
 		height: auto !important;
 	}
-	.counter { 
-		img { 
+	.counter {
+		img {
 			width: 30%;
 		}
 		h3 {
@@ -452,7 +452,7 @@
 
 	.mayor {
 		padding-top: 70px !important;
-		padding-bottom: 120px !important;	
+		padding-bottom: 120px !important;
 	}
 
 	.mayor p {
@@ -490,7 +490,7 @@
 
 	span.wpcf7-not-valid-tip {
 		text-align: center;
-	}	
+	}
 
 	.info-form li {
 		display: block !important;
@@ -534,7 +534,7 @@
 }
 
 @media (max-width:640px) {
-	
+
 	h5.small {
 		line-height: 25rem;
 		margin-top: 20px;
@@ -565,7 +565,7 @@
 		font-size: 50rem;
 	}
 
-	//EVENTS 
+	//EVENTS
 	.opt-in {
 		padding-top: 11%;
 		padding-bottom: 23%;
@@ -627,11 +627,20 @@
 	.horizontal-slider ul.slides {
 		width: 90%;
 		margin-left: 5% !important;
-	}	
+	}
 
 	.horizontal-slider ul.slides li img {
 		max-width: 100%;
 		height: auto;
+	}
+
+	.slant.sponsors {
+		.col-1 {
+			width: 100% !important;
+		}
+		.col-2 {
+			width: 100% !important;
+		}
 	}
 
 }
@@ -639,7 +648,7 @@
 
 //Mobile
 @media (max-width:490px) {
-	
+
 	header img {
 		display: block;
 		margin: 0 auto;
@@ -666,7 +675,7 @@
 	.facts {
 		padding-top: 155px;
 		margin-top: -150px;
-		padding-bottom: 80px;		
+		padding-bottom: 80px;
 	}
 
 	h2 span {display: none;}
@@ -675,7 +684,7 @@
 		font-size: 38rem;
 		line-height: 45rem;
 	}
-	
+
 	h5.light {
 		line-height: 45rem;
 	}
@@ -720,7 +729,7 @@
 	//PICS
 	.tile-grid li {
 		width: 100%;
-		margin: 0;
+		margin: 8.5px;
 	}
 
 	.tile-grid li img {
@@ -728,12 +737,12 @@
 		height: auto;
 	}
 
-	//SPONSORS 
-	.slant.sponsors .row li { 
+	//SPONSORS
+	.slant.sponsors .row li {
 		margin: 0px !important;
 		padding-bottom: 25px;
 	}
-	
+
 	//FOOTER
 	footer .seal {
 		padding-top: 100px;
