@@ -60,7 +60,7 @@ add_theme_support( 'post-thumbnails' );
 //Register Image Sizes
 add_image_size( 'history-scroller-thumb', 509, 372, true );
 add_image_size( 'blog-thumb', 816, 460, true );
-
+add_image_size( 'sponsor-sqaure', 303, 201, true );
 add_image_size( 'sponsor-1', 323, 235, true ); //top
 add_image_size( 'sponsor-2', 323, 178, true ); //platinum
 add_image_size( 'sponsor-3', 190, 117, true ); //gold, silver, bronze
