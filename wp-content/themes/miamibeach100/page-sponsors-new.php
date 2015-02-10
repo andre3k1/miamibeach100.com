@@ -29,7 +29,7 @@
 					
  						<?php while(has_sub_field('top_billing')): ?>
 							<li class="three">
-								<a target="_blank">
+								<a href="<?php the_sub_field('url'); ?>" target="_blank">
 
 									<?php 
 										$image = get_sub_field('image');
@@ -50,7 +50,7 @@
 					
  						<?php while(has_sub_field('platinum')): ?>
 							<li class="three">
-								<a target="_blank">
+								<a href="<?php the_sub_field('url'); ?>" target="_blank">
 
 									<?php 
 										$image = get_sub_field('image');
@@ -71,7 +71,7 @@
 					
  						<?php while(has_sub_field('gold')): ?>
 							<li class="five">
-								<a target="_blank">
+								<a href="<?php the_sub_field('url'); ?>" target="_blank">
 
 									<?php 
 										$image = get_sub_field('image');
@@ -92,7 +92,7 @@
 					
  						<?php while(has_sub_field('silver')): ?>
 							<li class="five">
-								<a target="_blank">
+								<a href="<?php the_sub_field('url'); ?>" target="_blank">
 
 									<?php 
 										$image = get_sub_field('image');
@@ -113,7 +113,7 @@
 					
  						<?php while(has_sub_field('bronze')): ?>
 							<li class="five">
-								<a target="_blank">
+								<a href="<?php the_sub_field('url'); ?>" target="_blank">
 
 									<?php 
 										$image = get_sub_field('image');
@@ -134,7 +134,7 @@
 					
  						<?php while(has_sub_field('supporting')): ?>
 							<li class="six">
-								<a target="_blank">
+								<a href="<?php the_sub_field('url'); ?>" target="_blank">
 
 									<?php 
 										$image = get_sub_field('image');
@@ -155,7 +155,7 @@
 					
  						<?php while(has_sub_field('event_partners')): ?>
 							<li class="six">
-								<a target="_blank">
+								<a href="<?php the_sub_field('url'); ?>" target="_blank">
 
 									<?php 
 										$image = get_sub_field('image');
