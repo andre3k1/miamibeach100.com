@@ -1542,17 +1542,46 @@ div.wpcf7 .placeheld {
 		margin: 0 auto;
 		display: block;
 		overflow: hidden;
+		font-size: 0px;
+		text-align: center;
+
+		&.first {
+			@extend %pt40;
+		}
 
 		li {
 			height: auto;
 			margin: 0px 29.5px 30px 29.5px;
 			@extend %mt50;
+
+			&.three {
+				width: 323px;
+				display: inline-block;
+				margin: 5px !important;
+			}
+
+			&.five {
+				width: 190px;
+				display: inline-block;
+				margin: 5px !important;
+			}
+
+			&.six {
+				width: 156px;
+				display: inline-block;
+				margin: 5px !important;
+			}
 		}
 
 		li a img {
 			width: 100%;
 			height: auto;
+			vertical-align: bottom;
 		}
+	}
+
+	.row:first-child {
+		display: none !important;
 	}
 
 	a {
