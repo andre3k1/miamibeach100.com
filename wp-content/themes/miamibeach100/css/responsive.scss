@@ -39,7 +39,7 @@
 
 	//HEADER + NAV
 	header {
-		position: static;
+		position: relative;
 		text-align: center;
 
 		nav {
@@ -357,10 +357,6 @@
 
 @media (max-width:1590px) {
 
-	.main-parallax.home {
-		background: url(../img/cover-home-medium.jpg) 0 0 no-repeat;
-	}
-
 }
 
 @media (max-width:1500px) {
@@ -656,6 +652,7 @@
 		background: url(../img/bg-counter-mobile.png) no-repeat;
 		margin-top: -240px !important;
 		height: auto !important;
+		padding-bottom: 70px !important;
 	}
 
 	.opt-in {

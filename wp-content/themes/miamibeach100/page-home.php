@@ -102,29 +102,27 @@
 	<div class="vectors-left" data-stellar-ratio="1.1"><img src="<?php echo get_template_directory_uri(); ?>/img/vectors/vectors-left-home.png" alt=""></div>
 	<div class="vectors-right" data-stellar-ratio="1.1"><img src="<?php echo get_template_directory_uri(); ?>/img/vectors/vectors-right-home.png" alt=""></div>
 
-	<section class="main-parallax home" data-stellar-background-ratio=".9">
+	<section class="main-parallax home" data-stellar-background-ratio="0.9">
 
 		<?php get_template_part( 'nav' ); ?>
 
-		<div class="container">
-			<!-- <ul class="social main text-center mb40">
-				<li><a target="_blank" href="https://www.facebook.com/miamibeach100"><i class="fa fa-facebook"></i></a></li>
-				<li><a target="_blank" href="http://instagram.com/miamibeach_100"><i class="fa fa-instagram"></i></a></li>
-				<li><a target="_blank" href="https://twitter.com/miamibeach100"><i class="fa fa-twitter"></i></a></li>
-			</ul> -->
-			<div class="tagline">
-				<h1 class="name">
-					<span class="name-part title">Celebrating </span> <span class="name-part animRight">1OO </span><span class="other"> Years</span>
-				</h1>
-				<h2 class="subtitle">of Miami Beach</h2>
-				<a href="http://miamibeach100.com/event/miami-beach-100-hour-centennial-celebration/" class="btn">Learn More &nbsp;&nbsp;<i class="fa fa-angle-down fa-lg"></i></a>
-				<!-- <a href="<?php get_site_url(); ?>/about/" class="btn">Learn More &nbsp;&nbsp;<i class="fa fa-angle-down fa-lg"></i></a> -->
-			</div>
-		</div>
+		<div class="container-lrg">
 
+			<img class="logo-large fadeIn animated" src="<?php echo get_template_directory_uri(); ?>/img/mb100-logo-large.png">
+
+			<div class="tagline">
+				<h1 class="name home-title">
+					<span class="name-part title">100 </span> <span class="name-part animRight">Hour </span><span class="other"> Celebration</span>
+				</h1>
+				<h2 class="subtitle home-title">Get Ready <br> March 22 - 26</h2>
+				<a href="http://miamibeach100.com/event/miami-beach-100-hour-centennial-celebration/" class="btn">Learn More &nbsp;&nbsp;<i class="fa fa-angle-right fa-lg"></i></a>
+				<img class="act animLeft" src="<?php echo get_template_directory_uri(); ?>/img/act.png">
+			</div>
+
+		</div>
+		
 	</section>
 
-<!-- Countdown -->
 	<section class="countDown">
 		<div class="container">
 			<div class="counter">
@@ -136,8 +134,6 @@
 			</div>
 		</div>
 	</section>
-
-
 
 	<section class="opt-in">
 

@@ -7,7 +7,7 @@ header {
 	width: 100%;
 	overflow: hidden;
 	@extend %mt50;
-	z-index: 9999999;
+	z-index: 999999999999;
 
 
 	.mb-logo {
@@ -124,17 +124,41 @@ header {
 }
 
 .tagline {
-	width: 510px;
-	float: right;
-	margin-top: 310px;
+	width: 430px;
+	display: inline-block;
+	margin-top: 248px;
+	vertical-align: top;
+	text-align: left;
 
-	h1, h2, span {
+	h1 span {
+		color: #f63379;
+	}
+
+	h2, h2 span {
 		color: #174073;
 	}
 
-	.btn {
-		@extend %mt35;
+	.home-title {
+		font-size: 57rem;
+		margin: 9px 0;
 	}
+
+	a.btn {
+		margin: 9px 0;
+	}
+
+	.act {
+		display: block;
+		margin: 7px 0;
+		max-width: 100%;
+		height: auto;
+	}
+
+}
+
+.logo-large {
+	display: inline-block;
+	margin: 72px 120px 0 0;
 }
 
 ul.social.main {
@@ -164,6 +188,7 @@ ul.social.main {
 // Thibault countdown - 12/9/2014
 
 section.countDown {
+	position: relative;
 	background: url(../img/bg-counter.png) no-repeat;
 	background-size: cover;
 	margin-top: -240px;
@@ -497,6 +522,72 @@ section.countDown {
 		}
 	}
 
+}
+
+.container-lrg {
+	width: 1400px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	z-index: 999999;
+	text-align: center;
+}
+
+@media only screen and (max-width: 1400px) {
+
+	.container-lrg {
+		width: 90%;
+		margin: 0 5%;
+	}
+
+	.logo-large {
+		width: 600px;
+		margin: 146px 5% 0 0; 
+	}
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+	.logo-large {
+		width: 400px;
+		margin-top: 264px;
+	}
+
+}
+
+@media only screen and (max-width: $site-width) {
+
+	.logo-large {
+		margin: -40px 0 0 0;
+		max-width: 100%;
+		height: auto;
+	}
+
+	.tagline {
+		text-align: center;
+		margin-top: 7px !important;	
+
+		.act {
+			margin: 7px auto;
+		}
+
+		.btn {
+			background-color: #174073;
+			color: #fff;
+		}
+	}
+
+	.main-parallax.home {
+		padding-bottom: 130px !important;
+	}
+
+}
+
+@media only screen and (max-width: 490px) {
+	.main-parallax.home {
+		padding-bottom: 90px !important;
+	}
 }
 
 /* ///////////////////////////////////////////////////////////////////// 
@@ -1767,8 +1858,21 @@ ul.social-footer {
 	box-sizing: border-box;
 
 	&.home {
+		position: relative;
 		background: url(../img/cover-home.jpg) 0 0 no-repeat;
 		background-size: cover;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHklEQVQIW2NkQAL/gYARxgdzQAAkAOOA2IzIHJAAACAGEAFjDBirAAAAAElFTkSuQmCC) repeat;
+			opacity: .3;
+			z-index: 0;
+		}
 	}
 
 	&.about {
