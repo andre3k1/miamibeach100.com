@@ -2,9 +2,9 @@
 Contributors: takayukister
 Donate link: http://contactform7.com/donate/
 Tags: contact, form, contact form, feedback, email, ajax, captcha, akismet, multilingual
-Requires at least: 3.9
-Tested up to: 4.0
-Stable tag: 4.0
+Requires at least: 4.0
+Tested up to: 4.1
+Stable tag: 4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,11 +42,11 @@ The following are other recommended plugins by the author of Contact Form 7.
 * Belarusian (be_BY) - Igor Dubilei
 * Bosnian (bs_BA) - Vedran
 * Bulgarian (bg_BG) - Iliyan Darganov
-* Catalan (ca) - Jordi Sancho, Robert Buj, Jaume Aragay Badia
+* Catalan (ca) - Jordi Sancho, Robert Buj, Jaume Aragay Badia, luba lee
 * Central Kurdish (ckb) - Mahr Hassan
 * Chinese (China; zh_CN) - Soz, Keefe Dunn, Stella Hu
 * Chinese (Taiwan; zh_TW) - James Wu
-* Croatian (hr) - tolingo Translation Services
+* Croatian (hr) - tolingo Translation Services, Marko Puskaric
 * Czech (cs_CZ) - Korry, Radovan Fiser, Tomas Vesely, Pavel Bilek, Vladislav Šenk
 * Danish (da_DK) - Jens Griebel, Georg S. Adamsen
 * Dutch (nl_NL) - Chris Devriese, Martin Hein, Rene, TenSheep, Tim de Hoog
@@ -60,7 +60,7 @@ The following are other recommended plugins by the author of Contact Form 7.
 * Greek (el) - Nick Mouratidis, Pr. friedlich, John D. Dimoferlias
 * Gujarati (gu_IN) - Apoto
 * Haitian (ht) - Lam Tu Do
-* Hebrew (he_IL) - Yaron Ofer, Arik Galansky
+* Hebrew (he_IL) - Yaron Ofer, Arik Galansky, Ahrale
 * Hindi (hi_IN) - Tarun Joshi, Ashish
 * Hungarian (hu_HU) - Andras Hirschler, János Csárdi-Braunstein, Farkas Győző
 * Indian Bengali (bn_IN) - Suman Manna
@@ -87,7 +87,7 @@ The following are other recommended plugins by the author of Contact Form 7.
 * Sinhala (si_LK) - Nitin Aggarwal
 * Slovak (sk_SK) - Patrik Bóna, WordPress Slovakia
 * Slovene (sl_SI) - Mihael Simonič, Jani Roskar
-* Spanish (es_ES) - Jordi Sancho, Vladimir Prieto, Federico Mikaelian, Matias Baldanza, Carlos Agnese, Lourdes Cuesta
+* Spanish (es_ES) - Jordi Sancho, Vladimir Prieto, Federico Mikaelian, Matias Baldanza, Carlos Agnese, Lourdes Cuesta, Carlos Oropesa
 * Swedish (sv_SE) - Fredrik Jonsson, the Swedish community
 * Tagalog (tl) - Rupert Agnew Lanuza, Hanne, Language Connect
 * Tamil (ta) - Nitin Aggarwal
@@ -125,39 +125,34 @@ Do you have questions or issues with Contact Form 7? Use these support channels 
 
 For more information, see [Releases](http://contactform7.com/category/releases/).
 
+= 4.1 =
+
+* Added maxlength and minlength options to several form-tag types.
+* Added [count] form-tag type that represents character count for form fields.
+* Introduced WPCF7_Validation class to handle the user-input validation process.
+* Added the front-end URL normalization for [url] fields.
+* Added default:get, default:post and default:post_meta options to get default values from the context.
+* Translations for Turkish, German, Portuguese, Dutch, and Hebrew have been updated.
+* WordPress 4.0 or higher is required.
+
+= 4.0.3 =
+
+* The contextual help tab has been added to admin pages.
+* Changed the admin menu icon to "email" dashicon.
+* Translations for Croatian, Turkish, and Catalan have been updated.
+
+= 4.0.2 =
+
+* Introduced wpcf7_build_query() to correctly apply urlencode to keys and values in URL queries.
+* Translations for Portuguese, Spanish, Hungarian, and German have been updated.
+
+= 4.0.1 =
+
+* Fixed a bug that caused an error when creating new contact forms in some environment.
+* Translations for Portuguese and Croatian have been updated.
+
 = 4.0 =
 
 * The default mail template changed (see [Best Practice to Set Up Mail](http://contactform7.com/best-practice-to-set-up-mail/)).
 * Translations for Slovak, German, Turkish and Portuguese have been updated.
 * WordPress 3.9 or higher is required.
-
-= 3.9.3 =
-
-* Fixed: file uploading was disabled in some of server environments because of wrong use of mt_rand() function.
-* Translations for Hungarian has been updated.
-
-= 3.9.2 =
-
-* Fixed: incorrect behavior seen in demo mode.
-* Fixed: Flamingo saved submitter's contact info even when the submission was spam.
-* New: introduce wpcf7_skip_mail filter.
-* Enhancement: add a random-named directory to each uploaded file's temporary file path in order to make the path harder for a submitter to guess.
-* Translation for Punjabi has been created.
-* Translations for Turkish, Korean and Slovak have been updated.
-
-= 3.9.1 =
-
-* Fix: options with empty values didn't work correctly in a drop-down menu.
-* Fix: broke layout of input fields after validation by an incorrect jQuery use.
-* Fix: couldn't enqueue JavaScript manually with wpcf7_enqueue_scripts() when WPCF7_LOAD_JS was false.
-* Fix: couldn't enqueue CSS manually with wpcf7_enqueue_styles() when WPCF7_LOAD_CSS was false.
-* Translations for Greek and Hungarian have been updated.
-
-= 3.9 =
-
-* A major change has been made to the internal structure. For details, see [beta release announcement](http://contactform7.com/2014/07/02/contact-form-7-39-beta/).
-* The exclude_blank mail option has been introduced.
-* The wpcf7_load_js and wpcf7_load_css (functions and filter hooks) have been introduced.
-* The jQuery Form Plugin (jquery.form.js) has been updated to 3.51.0.
-* Translations for Persian and Slovak have been updated.
-* WordPress 3.8 or higher is required.

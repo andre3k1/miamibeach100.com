@@ -3,9 +3,17 @@
 class WPCF7_ContactFormTemplate {
 
 	public static function get_default( $prop = 'form' ) {
-		$prop = preg_replace( '/[^a-z0-9_]/', '', $prop );
-		$callback = 'self::' . $prop;
-		$template = is_callable( $callback ) ? call_user_func( $callback ) : null;
+		if ( 'form' == $prop ) {
+			$template = self::form();
+		} elseif ( 'mail' == $prop ) {
+			$template = self::mail();
+		} elseif ( 'mail_2' == $prop ) {
+			$template = self::mail_2();
+		} elseif ( 'messages' == $prop ) {
+			$template = self::messages();
+		} else {
+			$template = null;
+		}
 
 		return apply_filters( 'wpcf7_default_template', $template, $prop );
 	}
@@ -143,7 +151,21 @@ function wpcf7_messages() {
 			'description'
 				=> __( "There is a field that the sender must fill in", 'contact-form-7' ),
 			'default'
-				=> __( 'Please fill the required field.', 'contact-form-7' )
+				=> __( 'Please fill in the required field.', 'contact-form-7' )
+		),
+
+		'invalid_too_long' => array(
+			'description'
+				=> __( "There is a field that the user input is longer than the maximum allowed length", 'contact-form-7' ),
+			'default'
+				=> __( 'This input is too long.', 'contact-form-7' )
+		),
+
+		'invalid_too_short' => array(
+			'description'
+				=> __( "There is a field that the user input is shorter than the minimum allowed length", 'contact-form-7' ),
+			'default'
+				=> __( 'This input is too short.', 'contact-form-7' )
 		)
 	);
 
