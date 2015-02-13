@@ -1,20 +1,20 @@
-<!-- This site uses the Yoast Google Analytics plugin v<?php echo GAWP_VERSION; ?> - Universal disabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<!-- This site uses the Google Analytics by Yoast plugin v<?php echo GAWP_VERSION; ?> - Universal disabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
 <script type="text/javascript">
 
 	var _gaq = _gaq || [];
 <?php
-		// List the GA elements from the class-ga-js.php
-		if ( count( $gaq_push ) >= 1 ) {
-			foreach ( $gaq_push as $item ) {
-				if ( ! is_array( $item ) ) {
-					echo '	_gaq.push([' . $item . "]);\n";
-				}
-				elseif ( isset( $item['value'] ) ) {
-					echo '	'.$item['value'] . "\n";
-				}
-			}
+// List the GA elements from the class-ga-js.php
+if ( count( $gaq_push ) >= 1 ) {
+	foreach ( $gaq_push as $item ) {
+		if ( ! is_array( $item ) ) {
+			echo '	_gaq.push([' . $item . "]);\n";
 		}
-		?>
+		elseif ( isset( $item['value'] ) ) {
+			echo '	'.$item['value'] . "\n";
+		}
+	}
+}
+?>
 
 	(function () {
 		var ga = document.createElement('script');
@@ -26,4 +26,4 @@
 	})();
 
 </script>
-<!-- / Yoast Google Analytics -->
+<!-- / Google Analytics by Yoast -->
