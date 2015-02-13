@@ -1,4 +1,3 @@
-
 <?php get_header(); ?>
 
 	<div class="vectors-left" data-stellar-ratio="1.1"><img src="<?php echo get_template_directory_uri(); ?>/img/vectors/vectors-left-pics-social.png" alt=""></div>
