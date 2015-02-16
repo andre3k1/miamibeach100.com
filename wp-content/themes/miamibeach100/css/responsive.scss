@@ -41,6 +41,7 @@
 	header {
 		position: relative;
 		text-align: center;
+		overflow: hidden;
 
 		nav {
 			width: 200px;
@@ -59,7 +60,10 @@
 				padding: 10px 0;
 				margin: 5px 0;
 
-				a {color: lighten(#4b96b1, 8)}
+				a {
+					color: lighten(#4b96b1, 8);
+					text-shadow: none;
+				}
 			}
 
 			&.expanded {
@@ -297,12 +301,12 @@
 
 @media (min-width: 1000px)  {
 	
-	header nav li {margin: 0 4px !important;}
+	// header nav li {margin: 0 4px !important;}
 
-	header nav li a,
-	.menu-item {
-		padding: 8px 6px !important;
-	}
+	// header nav li a,
+	// .menu-item {
+	// 	padding: 8px 6px !important;
+	// }
 
 	.info-form li {
 		display: block;

@@ -102,6 +102,11 @@
 	<div class="vectors-left" data-stellar-ratio="1.1"><img src="<?php echo get_template_directory_uri(); ?>/img/vectors/vectors-left-home.png" alt=""></div>
 	<div class="vectors-right" data-stellar-ratio="1.1"><img src="<?php echo get_template_directory_uri(); ?>/img/vectors/vectors-right-home.png" alt=""></div>
 
+	<div id="lightbox-form" style="display: none;">
+		<h2>Fill out This Form and be the first to know when Miami Beach 100 event tickets come out!</h2>
+		<?php echo do_shortcode( '[contact-form-7 id="2498" title="Data Capture Lightbox"]' ) ?>
+	</div>	
+
 	<section class="main-parallax home" data-stellar-background-ratio="0.9">
 
 		<?php get_template_part( 'nav' ); ?>
@@ -231,6 +236,15 @@
 			<div id="tweet-list" class="flexslider animscroll"></div>
 		</div>
 	</section>
+
+	<?php if( get_field('media_pdf') ): ?>
+	<section class="media-download">
+		<div class="container">
+			<h2>Download Our Media Press Kit</h2>
+			<a href="<?php the_field('media_pdf'); ?>" target="_blank" class="btn">Download PDF</a>
+		</div>
+	</section>
+	<?php endif; ?>
 
 	<section class="mayor">
 		<div class="container">
