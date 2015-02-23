@@ -104,6 +104,7 @@
 
 	<div id="lightbox-form" style="display: none;">
 		<h2>Fill out This Form and be the first to know when Miami Beach 100 event tickets come out!</h2>
+		<p class="body-text" style="font-size:13em">Tickets will be available for sale here online for Miami Beach Residents with valid ID on Tuesday, February 24th at 8:00 PM EST. General public tickets will be available on Thursday, February 26th at 8:00 PM EST.  If you would like to register to receive notices regarding all ticket on-sale announcements and other related Centennial promotions please enter you contact information below.</p>
 		<?php echo do_shortcode( '[contact-form-7 id="2498" title="Data Capture Lightbox"]' ) ?>
 	</div>	
 
