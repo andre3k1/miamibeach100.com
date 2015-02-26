@@ -96,9 +96,21 @@ var endTime = 1427342400000;
 var difference = Math.floor(endTime - today) / 1000;
 //difference = difference/1000;
 
-// CountDown Homepage
-jQuery('#rC').redCountdown({ preset: "white", end: today + difference  });
 
+// CountDown Homepage
+
+if ( jQuery( "#rC" ).length ) {
+	jQuery('#rC').redCountdown({ preset: "white", end: today + difference  });
+}
+
+jQuery('li.menu-item-has-children > a').click (function(e){
+	e.preventDefault();
+	return false;
+});
+
+jQuery(".faq-list li p.question").click(function() {
+	jQuery(this).parent().toggleClass("open");
+});
 
 //Cookie Script
 function createCookie(name,value,days) {

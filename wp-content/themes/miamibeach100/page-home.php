@@ -118,11 +118,12 @@
 
 			<div class="tagline">
 				<h1 class="name home-title">
-					<span class="name-part title">100 </span> <span class="name-part animRight">Hour </span><span class="other"> Celebration</span>
+					<span class="name-part title">1OO </span> <span class="name-part animRight">Hour </span><span class="other"> Celebration</span>
 				</h1>
-				<h2 class="subtitle home-title">Get Ready <br> March 22 - 26</h2>
-				<a href="http://miamibeach100.com/event/miami-beach-100-hour-centennial-celebration/" class="btn">Learn More &nbsp;&nbsp;<i class="fa fa-angle-right fa-lg"></i></a>
-				<img class="act animLeft" src="<?php echo get_template_directory_uri(); ?>/img/act.png">
+				<h2 class="subtitle home-title">March 22 - 26</h2>
+				<a target="_blank" href="https://www.ticketfly.com/purchase/event/792431?skinId=5141&mode=preview" class="btn buy">Buy Tickets &nbsp;&nbsp;<i class="fa fa-ticket"></i></a>
+				<a target="_blank" href="http://miamibeach100.com/event/miami-beach-100-hour-centennial-celebration/" class="btn">Learn More &nbsp;&nbsp;<i class="fa fa-info-circle"></i></a>
+				<a href="http://www.actproductions.com/" target="_blank"><img class="act animLeft" src="<?php echo get_template_directory_uri(); ?>/img/act.png"></a>
 			</div>
 
 		</div>
