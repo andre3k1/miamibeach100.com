@@ -102,12 +102,6 @@
 	<div class="vectors-left" data-stellar-ratio="1.1"><img src="<?php echo get_template_directory_uri(); ?>/img/vectors/vectors-left-home.png" alt=""></div>
 	<div class="vectors-right" data-stellar-ratio="1.1"><img src="<?php echo get_template_directory_uri(); ?>/img/vectors/vectors-right-home.png" alt=""></div>
 
-	<div id="lightbox-form" style="display: none;">
-		<h2>Fill out This Form and be the first to know when Miami Beach 100 event tickets come out!</h2>
-		<p class="body-text" style="font-size:13em">Tickets will be available for sale here online for Miami Beach Residents with valid ID on Tuesday, February 24th at 8:00 PM EST. General public tickets will be available on Thursday, February 26th at 8:00 PM EST.  If you would like to register to receive notices regarding all ticket on-sale announcements and other related Centennial promotions please enter you contact information below.</p>
-		<?php echo do_shortcode( '[contact-form-7 id="2498" title="Data Capture Lightbox"]' ) ?>
-	</div>	
-
 	<section class="main-parallax home" data-stellar-background-ratio="0.9">
 
 		<?php get_template_part( 'nav' ); ?>
@@ -122,7 +116,7 @@
 				</h1>
 				<h2 class="subtitle home-title">March 22 - 26</h2>
 				<a target="_blank" href="https://www.ticketfly.com/purchase/event/792431?skinId=5141&mode=preview" class="btn buy">Buy Tickets &nbsp;&nbsp;<i class="fa fa-ticket"></i></a>
-				<a target="_blank" href="http://miamibeach100.com/event/miami-beach-100-hour-centennial-celebration/" class="btn">Learn More &nbsp;&nbsp;<i class="fa fa-info-circle"></i></a>
+				<a href="http://miamibeach100.com/event/miami-beach-100-hour-centennial-celebration/" class="btn">Learn More &nbsp;&nbsp;<i class="fa fa-info-circle"></i></a>
 				<a href="http://www.actproductions.com/" target="_blank"><img class="act animLeft" src="<?php echo get_template_directory_uri(); ?>/img/act.png"></a>
 			</div>
 

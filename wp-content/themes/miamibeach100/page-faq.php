@@ -14,7 +14,7 @@
 		</div>
 	</section>
 
-	<section class="slant about">
+	<section class="slant faq">
 		<div class="container">
 			<h5 class="hued animscroll">We Have Answers!</h5>
 			<p class="about-blurb blurb animscroll"><?php the_field('main_about_blurb'); ?></p>
