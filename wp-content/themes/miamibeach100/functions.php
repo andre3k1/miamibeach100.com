@@ -40,6 +40,11 @@ if ( is_page('home')) {
 	wp_enqueue_script( 'twitter', get_template_directory_uri() . '/js/plugins/twitter.js','','', true );
 }
 
+if ( is_page('getting-there')) {
+  wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCmug5RSg5k2jbZCEED1yyIc1x8DX3LbGU&sensor=false','','', true );
+  wp_enqueue_script( 'map', get_template_directory_uri() . '/js/plugins/map.js', array( 'jquery' ),'', true );
+}
+
 	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/min/main.min.js', array( 'jquery' ), null, true );
 
 }

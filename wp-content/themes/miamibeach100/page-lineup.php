@@ -29,12 +29,12 @@
 			?>
 
 			<?php if( get_field('flyer_image') ): ?>
-			<img class="events-flyer" src="<?php echo theme_thumb($image_url_b, 1000); ?>" alt="miami beach 100 lineup">
+			<img class="events-flyer animscroll" src="<?php echo theme_thumb($image_url_b, 1000); ?>" alt="miami beach 100 lineup">
 			<?php endif; ?>
 
 			<?php if(get_field('events_list')): ?>
 
-				<ul class="artist-list">
+				<ul class="artist-list animscroll">
 				<?php while(has_sub_field('events_list')): ?>
 					<li>
 					<?php 
